@@ -1,0 +1,66 @@
+randomForest 4.7-1.2
+Type rfNews() to see new features/changes/bug fixes.
+
+Attaching package: 'ggplot2'
+
+The following object is masked from 'package:randomForest':
+
+    margin
+
+
+Attaching package: 'dplyr'
+
+The following object is masked from 'package:randomForest':
+
+    combine
+
+The following objects are masked from 'package:stats':
+
+    filter, lag
+
+The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union
+
+Error in `mutate()`:
+i In argument: `across(...)`.
+Caused by error in `across()`:
+i In argument: `all_of(c("id", "Geschlecht", "Alter", "Beruf_Stellung",
+  "Branche"))`.
+Caused by error in `all_of()`:
+! Can't subset elements that don't exist.
+x Elements `Geschlecht`, `Alter`, `Beruf_Stellung`, and `Branche` don't exist.
+Backtrace:
+     x
+  1. +-... %>% ...
+  2. +-dplyr::mutate(...)
+  3. +-dplyr::mutate(...)
+  4. +-dplyr::mutate(...)
+  5. +-dplyr:::mutate.data.frame(...)
+  6. | \-dplyr:::mutate_cols(.data, dplyr_quosures(...), by)
+  7. |   +-base::withCallingHandlers(...)
+  8. |   \-dplyr:::mutate_col(dots[[i]], data, mask, new_columns)
+  9. |     \-dplyr:::expand_across(dot)
+ 10. |       \-dplyr:::across_setup(...)
+ 11. |         \-tidyselect::eval_select(cols, data = data, error_call = error_call)
+ 12. |           \-tidyselect:::eval_select_impl(...)
+ 13. |             +-tidyselect:::with_subscript_errors(...)
+ 14. |             | \-base::withCallingHandlers(...)
+ 15. |             \-tidyselect:::vars_select_eval(...)
+ 16. |               \-tidyselect:::walk_data_tree(expr, data_mask, context_mask)
+ 17. |                 \-tidyselect:::eval_minus(expr, data_mask, context_mask, error_call)
+ 18. |                   \-tidyselect:::eval_bang(expr, data_mask, context_mask)
+ 19. |                     \-tidyselect:::walk_data_tree(expr[[2]], data_mask, context_mask)
+ 20. |                       \-tidyselect:::eval_context(expr, context_mask, call = error_call)
+ 21. |                         +-tidyselect:::with_chained_errors(...)
+ 22. |                         | \-base::withCallingHandlers(...)
+ 23. |                         \-rlang::eval_tidy(as_quosure(expr, env), context_mask)
+ 24. +-tidyselect::all_of(c("id", "Geschlecht", "Alter", "Beruf_Stellung", "Branche"))
+ 25. | \-tidyselect:::as_indices_impl(x, vars = vars, strict = TRUE)
+ 26. |   \-tidyselect:::chr_as_locations(x, vars, call = call, arg = arg)
+ 27. |     \-vctrs::vec_as_location(...)
+ 28. \-vctrs (local) `<fn>`()
+ 29.   \-vctrs:::stop_subscript_oob(...)
+ 30.     \-vctrs:::stop_subscript(...)
+ 31.       \-rlang::abort(...)
+Execution halted

@@ -1,0 +1,3 @@
+Error in install.package(readxl) :
+  could not find function "install.package"
+Execution halted

@@ -1,0 +1,42 @@
+randomForest 4.7-1.2
+Type rfNews() to see new features/changes/bug fixes.
+
+Attaching package: 'ggplot2'
+
+The following object is masked from 'package:randomForest':
+
+    margin
+
+
+Attaching package: 'dplyr'
+
+The following object is masked from 'package:randomForest':
+
+    combine
+
+The following objects are masked from 'package:stats':
+
+    filter, lag
+
+The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union
+
+      Values                 Names Ranking
+11 12.490000               Familie       5
+7  11.430909       Weiterbildungen       4
+8  11.650588             Ergonomie       4
+2   9.402308                Stress       3
+10 11.620000          Technostress       3
+15  9.810000                   WLB       2
+3  10.057778      Ern\303\244hrung       1
+5   9.921250 Arbeitsunf\303\244lle       1
+6  10.611111     Atmosph\303\244re       1
+9  11.428889                   IKT       1
+14  0.000000                Frauen       1
+1   9.507037                 Sport       0
+4   6.133333                 Sucht       0
+12  7.220000                Eltern       0
+13  0.000000       Kinderbetreuung       0
+There were 16 warnings (use warnings() to see them)
+There were 16 warnings (use warnings() to see them)

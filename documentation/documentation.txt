@@ -1,0 +1,179 @@
+Title: Dokumentation
+
+----
+
+Editor:
+
+# SGD Survey Tool
+
+Diese Dokumentation unterscheidet drei verschiedene "Benutzer" der Seite:
+
+* **Entwickler**: Programmiere des Backends. Sollten Erfahrung mit (Linux-)Server, Webentwicklung, php oder KirbyCMS haben.
+* **Administratoren**: Benutzer, die neue Umfragen oder Feedbacktypen erstellen. Sollten Erfahrung mit R haben. Administratoren sollten eigentlich alles über das Panel der Seite bearbeiten können. Es sollte keinen Grund geben sich per SSH auf den Server zu verbinden.
+* **Endnutzer**: Benutzer der Seite, die Umfragen ausfüllen und dann Feedback erhalten.
+
+## Für Administratoren
+
+Die Administration findet über das Panel statt. Das Panel ist eine Website die man über `<domain>.<top-lvl>/panel/` errericht z.B. (http://sgd-survey-tum.d/panel). Man muss sich einloggen und benötigt dafür einen Usernamen mit dazugehörigen Passwort.
+
+### Paneluser
+
+(image: user1.png)
+
+Um einen neuen zu erstellen klickt man zunächst links auf das Icon mit den Personen, dann kann man oben rechts einen neuen Account anlegen. Aktuell sind alle Paneluser automatisch Admins und können alles ändern. 
+
+### Datenfluss
+
+Der Datenfluss der Seite ist relativ simple:
+
+(image: sequence.png)
+
+User können durch einen Direktlink (URL) eine [Umfrage](#Umfragen) vom Server (Kirby) anfordern. Diese wird dann in Form einer HTML Seite beantwortet. Wenn die User diese Umfrage ausgefüllt absenden, speichert der Server die Daten (gennant Rückläufer) und verarbeitet die Daten mithilfe eines vorher definierten [R-Skriptes](#Skripte). Die Ergebnisse des R-Skriptes werden in einem Ordner gespeichert (genannt Evalutation). Danach leitet der Server die User auf die entsprechende [Feedbackseite](#Feedback) weiter. Wenn der User die Feedbackseite (auch zu einem späteren Zeitpunkt) anfordert, wird die Feedbackseite individuell für den User angezeigt, indem die Ergebnisse/Evaluation des R-Skriptes genutzt werden.
+
+Der Datenaustausch zwischen den Komponenten läuft fast immer über "Key -> Value" Paare. Diese können unterschiedliche Dateiformate haben. Verwendet wird meistens entweder `.json` oder `.csv`. User Umfrage wird als `json` hochgeladen und gespeichert. Diese wird zu einer `.csv`-Datei (`input.csv`) umgewandelt um im R-Skript verarbeitet zu werden. Ergebnisse des R-Skriptes werden wieder als (Key -> Value) Paar in Form einer `.json`-Datei (`output.json`) gespeichert. Diese können dann in der Feedbackseite variabel genutzt werden.
+
+### Umfragen
+
+Umfragen lassen sich einfach über das [Panel](#Panel) erstellen:
+
+(image: umfragen1.png)
+
+Nachdem ein Titel und ein URL-Anhang definiert wurde kann die Umfrage bearbeitet werden:
+
+(image: umfragen2.png)
+
+Eine Umfrage besteht aus
+
+* *Fixer Inhalt*,
+* *Umfrageseiten*,
+* *Files*,
+* *Skript*,
+* *Feedback*,
+* *Fragebögen*.
+
+Die gerade erstellte Seite befindet sich noch im Entwurfsmodus und kann nach initialer Bearbeitung oben rechts veröffentlicht werden.
+
+#### Fixer Inhalt
+
+Fixer Inhalt ist simpler Inhalt, wie Überschriften, Absätze, Bilder und Listen. Dieser wird die ganze Zeit beim Ausfüllen der Umfrage darüber sichtbar sein.
+
+#### Umfrageseiten
+
+Umfrageseiten bestehen aus mehreren Schritten, die alle einen Titel und Inhalt besitzen. Der Titel ist nur zur Organisation gedacht und hat keinerlei Bedeutung für die Nutzer.
+
+Der Inhalt ist wie fixer Inhalt simper Inhalt, der aber auch Fragen enthalten kann, wie zum Beispiel ein Eingabefeld oder eine Frage die mittels Likert-Skala beantwortet werden soll.
+
+Dabei ist wichtig dass jede Frage einen Key besitzt, da dieser später im R Skript genutzt wird um die Antwort zuzuordnen.
+
+#### Files
+
+Dies dient dem Upload von Dateien die für die Umfrage genutzt werden. Hauptsächlich für Bilder, die für die Umfrage benötigt werden und angezeigt werden sollen.
+
+#### Skript 
+
+Verweis auf eine [Skript-Datei](#Skript). Das Skript wird jedes mal aufgerufen, wenn die Umfrage ausgefüllt wurde.
+
+#### Feedback
+
+Verweis auf eine [Feedback-Datei](#Feedback). Das Feedback wird nach der Evaluation der Umfrage angezeigt.
+
+#### Fragebögen
+
+Unter diesem Reiter werden die Rückläufer in Form von `.json`-Dateien und [Evaluationen](#Evaluation) in Form von virtuellen Unterseiten angezeigt. Zusätzlich können die Rückläufer noch als `.csv`-Datei exportiert werden.
+
+### Skripte
+
+(image: skripte1.png)
+
+Skripte sind R-Skripte, die ausgeführt werden sobald eine Umfrage von einem User eingereicht wurde. Sie können online bearbeitet werden, als Datei auf dem Server oder übers Panel hochgeladen werden. Das Skript kann auf die Daten des Users zugreifen indem es die `input.csv` Datei einließt z.B. `data <- read.csv("input.csv")`. Die zuvor im Umfrageschritt definierten keys können genutzt werden um die Antworten des Users zu erhalten. **Achtung:** Wenn eine Frage von einem User nicht beantwortet wurde, existiert der passende Key **nicht** in den Daten.
+
+Nachdem die Daten verarbeitet wurden muss eine output.json Datei erstellt werden z.B.:
+
+```R
+exportJSON <- toJSON(result)
+write(exportJSON, "output.json")
+```
+
+Diese Datei enthält "Key -> Value" Paare, die für die Feedbackseite genutzt werden können. Es können aber auch weitere Dateien erstellt werden wie zum Beispiel Bilder. Diese können auch auf der Feedbackseite genutzt werden.
+
+### Feedback
+
+(image: feedback1.png)
+
+Feedbackseiten sind virtuelle Seiten, sie existieren nur in Verbindung mit einer [Evaluation](#Evaluation) (dem Ergebnis eines Skriptes). Die Feedbackseite fungiert dabei als ein Template (Vorlage). Sie beinhaltet Dateien wie zum Beispiel Bilder, und einfacher (formatierten) Text. Die Besonderheit des Templates sind die Variablen. Man kann `{{ keynamen }}` verwenden um Platzhalter zu erschaffen. Diese Platzhalter werden dann durch die Werte (Value) des entsprechenden Keys in dem Ergebnis der Evaluation ersetzt. Bilder können auch variabel sein. Dazu verwendet setzt man bei einem Bild den `Lokal` Ort und fügt den Bilddateinamen ein. Das Bild muss dann von dem R-Skript unter diesem namen erstellt werden.
+
+### Evaluation
+
+(image: evaluation1.png)
+
+Evaluationen sind vituelle Seiten, die erstellt werden, wenn ein User eine Umfrage ausgefüllt hat. Es entspricht einem Ordner, der eine `input.csv` Datei enthält, die die Eingaben des Users enthält, sowie einer `output.log`- und `output.json`-Datei die die Ergebnisse des R-Skriptes enthalten. Diese werden direkt auf der Evaluationsseite angezeigt (Ausgabe und Ergebnis). Alle Dateien in dem Evalautionsordner werden auch angezeigt. 
+
+Um das Entwickeln einfacher zu machen gibt es auch einen Rerun Button sowie einen Link zu dem Skript, welches ausgeführt wird. Damit kann man leicht Änderungen am Skript durchführen und auf Beispieldaten testen.
+
+## Technischen Details (**Entwickler**)
+
+Dieser Abschnitt richtet sich primär an **Entwickler**, die das Tool verstehen und weiterentwickeln wollen. Das System beruht auf [Kirby CMS](https://getkirby.com/) welches auf php und einer flat File Datenbank aufbaut. Alle Daten befinden sich daher im Projektordner `/home/user/application/frontend`.
+
+### Server
+
+Der Server ist ein Ubuntu 22.04.5 LTS und kann per SSH angesteuert werden. Die Applikation wird von Nginx durch den (nicht sudo) user `user` gestartet. Der Server wird von der TUM gehostet.
+
+Der Linux User
+username: user
+pw(initial): pleasechangeme
+
+IP: 138.246.225.195
+URL: sgd-survey-tum.de
+Es fehlt aktuell noch ein SSL Zertifikat.
+
+### Kirby CMS
+
+Das System läuft mit Kirby 4.7.0 und ich empfehle zunächst die [Kirby Dokumentation](https://getkirby.com/docs/guide/quickstart) zu lesen. Nichtdestotrotz hilft es sicherlich, wenn ein paar Orte näher erklärt werden:
+
+- `assets`: Frontend assets, hier liegen Javascript und CSS Dateien. CSS ist in Form von SCSS geschrieben. Man benötigt daher also ein SCSS compiler, wenn man die Orginale bearbeiten möchte.
+- `content`: Datenbank. Hier befinden sich alle Seiten und Daten als Ordner und Textdateien.
+- `kirby`: Das CMS. Dieser Ordner ist nur relvant wenn man Kirby aktualisieren möchte. Dazu muss nur dieser Ordner durch die neue Version ersetzt werden.
+- `media`: Temporäre Media Dateien.
+- `site`: Hier befinden sich die Logik in Unterordnern:
+  - `accounts`: User accounts. Wird am besten nur vom Panel aus bearbeitet.
+  - `blueprints`: Definieren wie das Panel aussieht indem es für jede Seite/User ein Layout definiert.
+  - `cache`: Temporäre Dateien.
+  - `config`: Kirby-Einstellungen in `config.php`.
+  - `controllers`: Definiert Logik für eine Seite, die Initial ausgeführt wird, bevor das Template der Seite gerendert wird.
+  - `models`: Definiert Logik für jede Seite die Objekte der jeweiligen Seite dann überall zur Verfügung stehen.
+  - `plugins`: Enthält Plugins. Viele sind slebst geschrieben (siehe Plugins).
+  - `sessions`: Temporäre Session Dateien.
+  - `snippets`: Schnipsel die in Templates genutzt werden können.
+  - `templates`: Template welches pro Seite gerendert werden soll.
+
+#### Relevante Grundprinzipien
+
+##### Seitenklassen
+In Kirby beruht fast alles auf Seiten. Jede Seite hat eine "Klasse". Diese Klasse
+- hat einen Namen: _eindeutiger Name. Definiert die Art der Seite z.B. "umfrage"._
+- hat ein Template: _Ein php Template, gespeichert in `site/templates/<seitenklasse>.php`_
+- hat ein Blueprint: _Eine yaml Datei, gespeichert in `site/blueprints/pages/<seitenklasse>.yml`. Diese definiert, wie Seiten dieser Klasse im Panel aussehen/welche Daten diese Seite speichert und wie sie zu bearbeiten sind._
+- kann ein Controller besitzen: _Eine php Datei, gespeichert in `site/controllers/<seitenklasse>.php`, die vor dem rendern des Templates ausgeführt wird. Kann für Logik genutzt werden die nicht ins Template geschrieben werden sollte._
+- kann ein Model besitzen: _Eine php Datei, gespeichert in `site/models/<seitenklasse>.php`, die weiter Funktionen zu den Seiten hinzufügt._
+
+##### Seiten
+Die expliziten Seiten befinden sich dann im `content` Ordner inform eines Ordners, der die URL der Seite definiert. Die Klasse der Seite wird definiert indem eine Textdatei `<seitenklasse>.txt` in den Ordner hinzugefügt wird. In dieser Datei befinden sich dann alle Daten zu dieser Seite. Eine Seite kann auch Unterseiten haben oder Dateien wie Bilder oder ähnliches speichern. Diese Dateien/Ordner liegen einfach in diesem Ordner.
+
+##### Blöcke
+Als weiteres wichtiges Konzept sind Blöcke zu nennen. Sie sind ähnlich wie Seiten nur etwas simpler und kleiner. Eine Seite kann mehrere Blöcke enthalten. Sie bestehen auch aus einem Typ/Klasse und besitzen ein Template (gespeichert unter `site/snippets/blocks/<blockklasse>.php`) und ein Blueprint (gespeichert unter `site/blueprints/blocks/<blockklasse>.yml`). Diese Blöcke können dann für Seiten genutzt werden um die Seite dynmaisch (von Administratoren) mit Inhalt zu füllen.
+
+## FAQ
+
+### Ich möchte ein neues R Packet installieren. (**Administrator**)
+
+Man kann sich entweder auf den Server per SSH verbinden und dort per Console Packete installieren. Man kann aber auch einen Trick anwenden. Man kann ein R-Skript auf dem Server ändern, indem man `install.packages("<packetname>")` hinzufügt. Wenn man dieses Skript dann einmal ausführt wird das Packet installiert. Zum ausführen des Skriptes benötigt man leider mindestens eine Evaluation, welche dieses Skript benutzt. Hat man diese, so kann man einfach rerun benutzen um das Packet zu installieren. **Wichtig:** Danach muss die Zeile entfernt werden, da sonst das Skript jedes mal wenn eine Person eine Umfrage einreicht, die dieses Skript verwendet, das Packet installiert.
+
+### Ich möchte neue CSS Regel hinzufügen/ändern (**Entwickler**)
+Das einfachste ist, wenn die Datei unter `assets/css/custom.css` geändert wird. Diese CSS Datei wird in allen Seiten als letztes importiert (siehe `site/snippets/head.php`). Wenn man existierende Regeln überschreiben will, dann müssen die SCSS Dateien unter `assets/css/src/*.scss` geändert werden und erneut kompiliert. Es ist aktuell kein Kompiler auf dem Server dafür installiert.
+
+### Ich möchte ein neues html Element für Umfragen/Feedbackseiten zur Verfügung stellen. (**Entwickler**)
+Ein neues Element is ein Block. Dazu muss eine neue `site/snippets/blocks/<blockklasse>.php` Datei erstellt werden und eine passende `site/blueprints/blocks/<blockklasse>.yml` Blueprintdatei. Es empfielt sich dazu schon existierende blocks anzugucken und die Kirby Dokumnetation zu lesen.
+
+----
+
+Uuid: kKUhTQyE11XWoqoq

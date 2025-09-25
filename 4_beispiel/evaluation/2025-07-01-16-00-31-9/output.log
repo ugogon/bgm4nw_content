@@ -1,0 +1,3 @@
+Error in data[sapply(data, is.numeric)] :
+  object of type 'closure' is not subsettable
+Execution halted

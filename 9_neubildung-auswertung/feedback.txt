@@ -1,0 +1,9 @@
+Title: Neubildung_Auswertung
+
+----
+
+Text: [{"content":{"level":"h2","text":"Die Neubildung der Cluster war erfolgreich."},"id":"80274b7e-6756-4b8d-acea-987baa5ed848","isHidden":false,"type":"heading"}]
+
+----
+
+Uuid: ntehfja8waqst2lt

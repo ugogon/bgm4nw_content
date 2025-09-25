@@ -1,0 +1,9 @@
+Title: 1 Beispiel Feedback
+
+----
+
+Text: [{"content":{"level":"h2","text":"Danke für die Teilnahme!"},"id":"c7e39ddb-ec0a-4cfb-9ffd-427f477a3752","isHidden":false,"type":"heading"},{"content":{"text":"<p>Hier ist Ihr persönliches arbeitsbezogenes Ressourcenprofil:</p><p>{{ summe }}</p>"},"id":"f603d796-71e8-4d13-b86b-04f43188a0d4","isHidden":false,"type":"text"},{"content":{"location":"local","image":[],"src":"","local":"filename.png","alt":"","caption":"","link":"","ratio":"16/9","crop":"false"},"id":"f6f4891d-1fa8-46bc-8e49-1fecdeab7b26","isHidden":false,"type":"image"}]
+
+----
+
+Uuid: A76U03RvSNhdv284
