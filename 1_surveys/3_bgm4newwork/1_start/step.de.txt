@@ -1,0 +1,13 @@
+Title: Start
+
+----
+
+Blocks: [{"content":{"level":"h2","text":"Umfrage für Ihr persönliches BGM Assessment"},"id":"832189b7-1004-401f-9c7c-fde6ca8f5dbb","isHidden":false,"type":"heading"},{"content":{"text":"<p>Willkommen bei dem Umfragetool BGM4NW. Im Folgenden werden Ihnen einige kurze Fragen zu Ihrer Arbeitsumgebung gestellt. </p><p>Nachdem Sie diese beantwortet haben <em>(~ 20 Minuten)</em>, erhalten Sie ein persönliches Profil, welches Ihnen Informationen über Ihre Arbeitsumgebung, persönliche Ressourcen und Anforderungen gibt und mögliche BGM-Maßnahmen vorschlägt, welche für Sie nützlich sein könnten. </p><p>Das Tool wurde vom Team des Institutes für Arbeits-, Sozial- und Präventivmedizin der Universitätsmedizin Göttingen für das Projekt BGM4NW entwickelt. Bei Fragen kontaktieren Sie uns gerne unter <em>x</em>.</p>"},"id":"3c71699c-088e-481c-8981-41caec293a20","isHidden":false,"type":"text"}]
+
+----
+
+Fixed: 
+
+----
+
+Uuid: skxrqhleolz3tiwy

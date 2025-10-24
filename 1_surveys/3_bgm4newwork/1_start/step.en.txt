@@ -1,0 +1,9 @@
+Title: Start
+
+----
+
+Blocks: [{"content":{"level":"h2","text":"Survey for your personal New Work Assessment"},"id":"832189b7-1004-401f-9c7c-fde6ca8f5dbb","isHidden":false,"type":"heading"},{"content":{"text":"<p>Welcome to the BGM4NW survey tool. The BGM4NW research project has focussed on occupational health measures and New Work work settings. New Work work settings describe working environments that focus on self-determination and are often organised flexibly. This tool has also been developed as part of the project to help you adopt healthy behaviour in New Work working environments.</p><p>In what follows, you will be asked a few brief questions about your working environment. Once you have answered these questions (this will take around 15 minutes), you will receive a personal profile that gives you information about your working environment, personal resources and requirements and suggests possible occupational health management measures that could be useful for you. </p><p>The tool has been developed by the team at the institute of occupational, social and preventive medicine at the University Medical Center Göttingen for the BGM4NW project. If you have any questions, please contact us at x.</p>"},"id":"3c71699c-088e-481c-8981-41caec293a20","isHidden":false,"type":"text"}]
+
+----
+
+Fixed: 
