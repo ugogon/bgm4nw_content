@@ -442,6 +442,17 @@ result <- data.frame(Bgm1 = BGM1,
                      RefVal13 = CompetenceMeans[dat$cluster,13]/5,
                      RefVal14 = CompetenceMeans[dat$cluster,14]/5,
                      RefVal15 = CompetenceMeans[dat$cluster,15]/5,
-                     RefVal16 = CompetenceMeans[dat$cluster,16]/5)
+                     RefVal16 = CompetenceMeans[dat$cluster,16]/5,
+                     Cluster1 = Clusterframe_[3,1],
+                     Cluster2 = Clusterframe_[3,2],
+                     Cluster3 = Clusterframe_[3,3],
+                     Cluster4 = Clusterframe_[3,4],
+                     Cluster5 = Clusterframe_[3,5],
+                     Cluster6 = Clusterframe_[3,6],
+                     Cluster7 = Clusterframe_[3,7],
+                     Cluster8 = Clusterframe_[3,8],
+                     Cluster9 = Clusterframe_[3,9],
+                     Cluster10 = Clusterframe_[[10]][3],
+                     Cluster11 = Clusterframe_[[11]][3])
 exportJSON <- toJSON(result)
 write(exportJSON, "output.json")
