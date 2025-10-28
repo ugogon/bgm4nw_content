@@ -410,6 +410,22 @@ result <- data.frame(Bgm1 = BGM1,
                      Comp13 = Comp_13,
                      Comp14 = Comp_14,
                      Comp15 = Comp_15,
-                     Comp16 = Comp_16)
+                     Comp16 = Comp_16,
+                     CompVal1 = CompetenceMeans[dat$cluster,1]/5,
+                     CompVal2 = CompetenceMeans[dat$cluster,2]/5,
+                     CompVal3 = CompetenceMeans[dat$cluster,3]/5,
+                     CompVal4 = CompetenceMeans[dat$cluster,4]/5,
+                     CompVal5 = CompetenceMeans[dat$cluster,5]/5,
+                     CompVal6 = CompetenceMeans[dat$cluster,6]/5,
+                     CompVal7 = CompetenceMeans[dat$cluster,7]/5,
+                     CompVal8 = CompetenceMeans[dat$cluster,8]/5,
+                     CompVal9 = CompetenceMeans[dat$cluster,9]/5,
+                     CompVal10 = CompetenceMeans[dat$cluster,10]/5,
+                     CompVal11 = CompetenceMeans[dat$cluster,11]/5,
+                     CompVal12 = CompetenceMeans[dat$cluster,12]/5,
+                     CompVal13 = CompetenceMeans[dat$cluster,13]/5,
+                     CompVal14 = CompetenceMeans[dat$cluster,14]/5,
+                     CompVal15 = CompetenceMeans[dat$cluster,15]/5,
+                     CompVal16 = CompetenceMeans[dat$cluster,16]/5)
 exportJSON <- toJSON(result)
 write(exportJSON, "output.json")
