@@ -1,0 +1,29 @@
+randomForest 4.7-1.2
+Type rfNews() to see new features/changes/bug fixes.
+
+Attache Paket: ‘ggplot2’
+
+Das folgende Objekt ist maskiert ‘package:randomForest’:
+
+    margin
+
+
+Attache Paket: ‘dplyr’
+
+Das folgende Objekt ist maskiert ‘package:randomForest’:
+
+    combine
+
+Die folgenden Objekte sind maskiert von ‘package:stats’:
+
+    filter, lag
+
+Die folgenden Objekte sind maskiert von ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Es gab 16 Warnungen (Anzeige mit warnings())
+Saving 7 x 7 in image
+Es gab 16 Warnungen (Anzeige mit warnings())
+pdf
+  2
