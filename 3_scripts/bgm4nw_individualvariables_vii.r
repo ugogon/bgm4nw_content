@@ -16,6 +16,7 @@ library(png)
 library(fmsb)
 #### Input fuer das System #### ------------------------------------------------
 dat <- read.csv("input.csv") # Der allgemeine Dataframe mit allen Variablen
+dat["lang"] <- NULL
 CompetenciesFrame <- data.frame(read.csv("../../CompetenciesFrame.csv")) # Kompetenzwerte für jede Person
 CompetenciesFrame <- subset(CompetenciesFrame, select = -c(X))
 CompetenceMeans <- data.frame(read.csv("../../CompetenceMeans.csv")) # Mittelwerte der Kompetenzen nach Cluster
