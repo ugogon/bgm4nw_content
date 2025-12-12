@@ -3,7 +3,7 @@ Content:
 # Erstellt von Felix Leitner, Anna-Maria Knieps am 04.07.25
 # Für das Projekt BGM4NW der Universitätsmedizin Göttingen
 # Dieser Code berechnet individuelle Variablen für jede Person
-# install.packages("randomForest",repos = "http://cran.us.r-project.org")
+install.packages("randomForest",repos = "http://cran.us.r-project.org")
 # install.packages("RColorBrewer",repos = "http://cran.us.r-project.org")
 # install.packages("dplyr",repos = "http://cran.us.r-project.org")
 # install.packages("ggplot2",repos = "http://cran.us.r-project.org")
