@@ -57,7 +57,7 @@ Clusterframe_6 <- subset(Clusterframe_6, select = -c(X))
 rf_model <- readRDS("../../rf_model_cluster.rds")
 # Variablen umbenennen (bei allen Variablennamen Endung "-0" entfernen)
 names(dat) <- gsub(".0$", "", names(dat))  
-options("encoding" = "UTF-8")
+
 # Variablen umkodieren
 dat <- dat %>%
   # in Datensatz geht es von "0" los, muss aber von "1" losgehen (bei allen Variablen außer den unten genannten)
