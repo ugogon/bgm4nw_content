@@ -14,7 +14,7 @@ library(dplyr)
 library(RColorBrewer)
 library(png)
 library(fmsb)
-Sys.setlocale("LC_ALL", "en_US.UTF-8")
+Sys.setlocale("LC_ALL", "de_DE.UTF-8")
 #### Input fuer das System #### ------------------------------------------------
 dat <- read.csv("input.csv") # Der allgemeine Dataframe mit allen Variablen
 dat["lang"] <- NULL
