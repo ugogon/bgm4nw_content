@@ -456,4 +456,4 @@ result <- data.frame(Bgm1 = BGM1,
                      Cluster10 = Clusterframe_[[10]][3],
                      Cluster11 = Clusterframe_[[11]][3])
 exportJSON <- toJSON(result)
-write_utf8(exportJSON, "output.json")
+write(exportJSON, "output.json")
