@@ -419,7 +419,7 @@ Comp_16 <- getComp(Low_High[16])
 #           axistype = 1, caxislabels=seq(0,10,2), axislabcol = "black", calcex = 2)
 # This function is required to save the files correctly
 
-print(dat$AGK_Planung)
+print(PsyEmp_Bedeutsamkeit_v)
 # Output weitergeben
 result <- data.frame(Bgm1 = BGM1,
                      Bgm2 = BGM2,
