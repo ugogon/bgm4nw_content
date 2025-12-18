@@ -134,7 +134,7 @@ PsyEmp_Kompetenz_v <- mean(PsyEmp_Kompetenz_values, na.rm = TRUE)
 PsyEmp_Selbstbestimmung_values <- ifelse(df$Flex1oe_mean <= OertlicheFlexibiltaet + 1 & df$Flex1oe_mean >= OertlicheFlexibiltaet - 1, df$Flex1oe_mean, NA)
 PsyEmp_Selbstbestimmung_v <- mean(PsyEmp_Selbstbestimmung_values, na.rm = TRUE)
 
-DigKomp_Verarbeitung_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
+DigKomp_Verarbeitung_values <- ifelse(df$Digi3IKT_Nutzung_Vernetzung_mean <= IktNutzungVernetzung + 1 & df$Digi3IKT_Nutzung_Vernetzung_mean >= IktNutzungVernetzung - 1, df$Digi3IKT_Nutzung_Vernetzung_mean, NA)
 DigKomp_Verarbeitung_v <- mean(DigKomp_Verarbeitung_values, na.rm = TRUE)
 
 DigKomp_Kommunikation_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
