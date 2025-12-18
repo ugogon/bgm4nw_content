@@ -53,7 +53,18 @@ Clusterframe_6 <- data.frame(read.csv("../../clusterframe_6.csv"))
 Clusterframe_6 <- subset(Clusterframe_6, select = -c(X))
 
 #### Erstellen des NW-Profiles für eine Person #### --------------------------------
-
+#Output.Variable  Name
+#Cluster 01 ZeitlFlexibilitaet
+#Cluster 02 OertlicheFlexibiltaet
+#Cluster 03 Erreichbarkeit
+#Cluster 04 ProReaktivitaet
+#Cluster 05 AgileMethoden
+#Cluster 06 Organisationsstruktur
+#Cluster 07 Autonomie
+#Cluster 08 Partizipation
+#Cluster 09 VirtuelleZusammenarbeit
+#Cluster 10 IktNutzungVernetzung
+#Cluster 11 Automation
 
 # Laden des Random-Forest-Modells
 rf_model <- readRDS("../../rf_model_cluster.rds")
