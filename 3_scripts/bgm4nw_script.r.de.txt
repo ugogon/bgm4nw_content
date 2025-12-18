@@ -280,7 +280,7 @@ updateRanking <- function(number)
 Testperson <- dat %>% dplyr::select(AGK_Planung:GesKomp) # Auswahl der Variablen für das Ranking
 RankingUpdates <- updateRanking(Testperson) # Individualisierung des Rankings
 PersonRanking <- c(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) + RankingUpdates
-Person <- Person[order(Person$Ranking, decreasing=TRUE),] # Ordnung des Rankings
+PersonRanking <- order(PersonRanking, decreasing=TRUE) # Ordnung des Rankings
 
 # Informationen zu den Kompetenzen einfügen
 Competencies <- c("Planungskompetenz", "Selbstmotivierungskompetenz", "Stressvermeidungskompetenz",
