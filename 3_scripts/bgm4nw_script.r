@@ -113,7 +113,8 @@ dat <- dat %>%
 
 #Kompetenzen Vergleichswerte
 #AGK_Planung ZeitlFlex
-AGK_Planung_values <- ifelse(df$Flex1_mean_z <= ZeitlFlexibilitaet + 1 && df$Flex1_mean_z >= ZeitlFlexibilitaet - 1 , df$KR1AGK_Planung_mean, NA)
+AGK_Planung_values <- ifelse(df$Flex1_mean_z <= ZeitlFlexibilitaet + 1 & df$Flex1_mean_z >= ZeitlFlexibilitaet - 1, df$KR1AGK_Planung_mean, NA)
+#AGK_Planung_values <- ifelse(df$Flex1_mean_z >= ZeitlFlexibilitaet - 1, df$KR1AGK_Planung_mean, NA)
 AGK_Planung_v <- mean(AGK_Planung_values, na.rm = TRUE)
 print(AGK_Planung_v)
 #print(df$Flex1_mean_z)
