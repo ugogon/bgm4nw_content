@@ -209,14 +209,7 @@ updateRanking <- function(number, cl)
   ifelse(Resilienz <= Resilienz_v, Multiplicator[15] <- Multiplicator[15] - 1, Multiplicator[15] <- Multiplicator[15] + 1)
   ifelse(GesKomp <= GesKomp_v, Multiplicator[16] <- Multiplicator[16] - 1, Multiplicator[16] <- Multiplicator[16] + 1)
   
-  for(x in 1:16)
-  {
-    LowB <- CompetenceMeans[,x][c] - DeviationMeans[,x][c]
-    HighB <- CompetenceMeans[,x][c] + DeviationMeans[,x][c]
-    ifelse(Testperson[x] <= LowB, Multiplicator[x] <- -1, 0)
-    ifelse(Testperson[x] >= HighB, Multiplicator[x] <- 1, 0)
-  }
-  AGK <- Multiplicator[1] + Multiplicator[2] + Multiplicator[3]
+    AGK <- Multiplicator[1] + Multiplicator[2] + Multiplicator[3]
   if(AGK > 0)
   {
     rank <- rank - Bonus_AGK
