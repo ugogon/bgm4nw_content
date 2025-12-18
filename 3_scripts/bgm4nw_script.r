@@ -191,36 +191,21 @@ updateRanking <- function(number, cl)
 
   # Durchgehen aller Maßnahmen und vergeben der Punkte
   ifelse(AGK_Planung <= AGK_Planung_v, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
-  ifelse(asdf <= asdf, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
-  ifelse(asdf <= asdf, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
-  ifelse(asdf <= asdf, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
-  ifelse(asdf <= asdf, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
-  ifelse(asdf <= asdf, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
-  ifelse(asdf <= asdf, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
-  ifelse(asdf <= asdf, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
-  ifelse(asdf <= asdf, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
-  ifelse(asdf <= asdf, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
-  ifelse(asdf <= asdf, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
-  ifelse(asdf <= asdf, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
-  ifelse(asdf <= asdf, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
-  ifelse(asdf <= asdf, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
-  ifelse(asdf <= asdf, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
-  
-  AGK_Selbstmotivierung
-  AGK_Stressvermeidung
-  PsyEmp_Bedeutsamkeit
-  PsyEmp_Einfluss
-  PsyEmp_Kompetenz
-  PsyEmp_Selbstbestimmung
-  DigKomp_Verarbeitung
-  DigKomp_Kommunikation
-  DigKomp_Erstellung
-  DigKomp_Sicherheit
-  DigKomp_Problemloesung
-  HoL_Achtsamkeit
-  HoL_Verhalten
-  Resilienz
-  GesKomp
+  ifelse(AGK_Selbstmotivierung <= AGK_Selbstmotivierung_v, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
+  ifelse(AGK_Stressvermeidung <= AGK_Stressvermeidung_v, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
+  ifelse(PsyEmp_Bedeutsamkeit <= PsyEmp_Bedeutsamkeit_v, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
+  ifelse(PsyEmp_Einfluss <= PsyEmp_Einfluss_v, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
+  ifelse(PsyEmp_Kompetenz <= PsyEmp_Kompetenz_v, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
+  ifelse(PsyEmp_Selbstbestimmung <= PsyEmp_Selbstbestimmung_v, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
+  ifelse(DigKomp_Verarbeitung <= DigKomp_Verarbeitung_v, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
+  ifelse(DigKomp_Kommunikation <= DigKomp_Kommunikation_v, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
+  ifelse(DigKomp_Erstellung <= DigKomp_Erstellung_v, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
+  ifelse(DigKomp_Sicherheit <= DigKomp_Sicherheit_v, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
+  ifelse(DigKomp_Problemloesung <= DigKomp_Problemloesung_v, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
+  ifelse(HoL_Achtsamkeit <= HoL_Achtsamkeit_v, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
+  ifelse(HoL_Verhalten <= HoL_Verhalten_v, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
+  ifelse(Resilienz <= Resilienz_v, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
+  ifelse(GesKomp <= GesKomp_v, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
   
   for(x in 1:16)
   {
