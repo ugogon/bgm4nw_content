@@ -109,7 +109,13 @@ dat <- dat %>%
   mutate(HoL_Verhalten = rowMeans(across(T2_KR5HolSC_V1:T2_KR5HolSC_V2))) %>%
   mutate(Resilienz = rowMeans(across(KR4Res1:KR4Res6))) %>% 
   mutate(GesKomp = rowMeans(across(T2_KR3GesKomp1:T2_KR3GesKomp6)))
-  
+
+
+#Kompetenzen Vergleichswerte
+#AGK_Planung ZeitlFlex
+AGK_Planung_v <- ifelse(df$Flex1_mean_z <= ZeitlFlexibilitaet + 1, 0, 1)
+
+
 # Nötige Variablen auswählen
 #items_clust <- dat[, short_form_items$items]
 # Items standardisieren
