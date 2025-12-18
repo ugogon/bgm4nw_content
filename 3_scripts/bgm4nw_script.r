@@ -155,10 +155,10 @@ HoL_Achtsamkeit_v <- mean(HoL_Achtsamkeit_values, na.rm = TRUE)
 HoL_Verhalten_values <- df$T2_KR5HolSC_Verhalten_mean
 HoL_Verhalten_v <- mean(HoL_Verhalten_values, na.rm = TRUE)
 
-Resilienz_values <- df$T2_KR5HolSC_Achtsamkeit_mean
+Resilienz_values <- df$KR4Res_mean
 Resilienz_v <- mean(Resilienz_values, na.rm = TRUE)
 
-GesKomp_values <- df$T2_KR5HolSC_Achtsamkeit_mean
+GesKomp_values <- df$T2_KR3GesKomp_mean
 GesKomp_v <- mean(GesKomp_values, na.rm = TRUE)
 
 #print(AGK_Planung_v)
