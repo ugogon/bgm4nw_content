@@ -295,9 +295,50 @@ IndividualCompetencies <- c(dat$AGK_Planung, dat$AGK_Selbstmotivierung, dat$AGK_
                             dat$DigKomp_Erstellung, dat$DigKomp_Sicherheit, dat$DigKomp_Problemloesung, 
                             dat$HoL_Achtsamkeit, dat$HoL_Verhalten, dat$Resilienz, dat$GesKomp)
 
+ClusterCompetencies <- data.frame(AGK_Planung_v, AGK_Selbstmotivierung_v, AGK_Stressvermeidung_v, PsyEmp_Bedeutsamkeit_v, PsyEmp_Einfluss_v, PsyEmp_Kompetenz_v, PsyEmp_Selbstbestimmung_v, DigKomp_Verarbeitung_v, DigKomp_Kommunikation_v, DigKomp_Erstellung_v, DigKomp_Sicherheit_v, DigKomp_Problemloesung_v, HoL_Achtsamkeit_v, HoL_Verhalten_v, Resilienz_v, GesKomp_v)
 
+# Für Visualisierung vorbereiten
+VisualisationFrame <- data.frame(Number, IndividualCompetencies, ClusterCompetencies, Competencies)
 
+# Visualisierung
+# Ja nach ueber/unterdurchschnittlicher Kompetenz erhalten die Balken andere Farben
+Colorfill <- c("black", "black", "black", "black", "black", "black", "black", "black",
+               "black", "black", "black", "black", "black", "black", "black", "black")
+for(x in 1:16)
+{
+  if(IndividualCompetencies[x] >= ClusterCompetencies[x])
+  {
+    Colorfill[x] <- "#31A354"
+  }
+  else
+  {
+    Colorfill[x] <- "#DE2D26" 
+  }
+}
 
+plot <- ggplot(data=VisualisationFrame, aes(x=Number, y=IndividualCompetencies)) +
+  geom_bar(stat="identity", color = "black", fill=Colorfill) +
+  geom_segment(aes(x=0.5,y=CompetenceMeans[dat$cluster,16],xend=1.5,yend=CompetenceMeans[dat$cluster,16]), linewidth = 0.8) +
+  geom_segment(aes(x=1.5,y=CompetenceMeans[dat$cluster,15],xend=2.5,yend=CompetenceMeans[dat$cluster,15]), linewidth = 0.8) +
+  geom_segment(aes(x=2.5,y=CompetenceMeans[dat$cluster,14],xend=3.5,yend=CompetenceMeans[dat$cluster,14]), linewidth = 0.8) +
+  geom_segment(aes(x=3.5,y=CompetenceMeans[dat$cluster,13],xend=4.5,yend=CompetenceMeans[dat$cluster,13]), linewidth = 0.8) +
+  geom_segment(aes(x=4.5,y=CompetenceMeans[dat$cluster,12],xend=5.5,yend=CompetenceMeans[dat$cluster,12]), linewidth = 0.8) +
+  geom_segment(aes(x=5.5,y=CompetenceMeans[dat$cluster,11],xend=6.5,yend=CompetenceMeans[dat$cluster,11]), linewidth = 0.8) +
+  geom_segment(aes(x=6.5,y=CompetenceMeans[dat$cluster,10],xend=7.5,yend=CompetenceMeans[dat$cluster,10]), linewidth = 0.8) +
+  geom_segment(aes(x=7.5,y=CompetenceMeans[dat$cluster,9],xend=8.5,yend=CompetenceMeans[dat$cluster,9]), linewidth = 0.8) +
+  geom_segment(aes(x=8.5,y=CompetenceMeans[dat$cluster,8],xend=9.5,yend=CompetenceMeans[dat$cluster,8]), linewidth = 0.8) +
+  geom_segment(aes(x=9.5,y=CompetenceMeans[dat$cluster,7],xend=10.5,yend=CompetenceMeans[dat$cluster,7]), linewidth = 0.8) +
+  geom_segment(aes(x=10.5,y=CompetenceMeans[dat$cluster,6],xend=11.5,yend=CompetenceMeans[dat$cluster,6]), linewidth = 0.8) +
+  geom_segment(aes(x=11.5,y=CompetenceMeans[dat$cluster,5],xend=12.5,yend=CompetenceMeans[dat$cluster,5]), linewidth = 0.8) +
+  geom_segment(aes(x=12.5,y=CompetenceMeans[dat$cluster,4],xend=13.5,yend=CompetenceMeans[dat$cluster,4]), linewidth = 0.8) +
+  geom_segment(aes(x=13.5,y=CompetenceMeans[dat$cluster,3],xend=14.5,yend=CompetenceMeans[dat$cluster,3]), linewidth = 0.8) +
+  geom_segment(aes(x=14.5,y=CompetenceMeans[dat$cluster,2],xend=15.5,yend=CompetenceMeans[dat$cluster,2]), linewidth = 0.8) +
+  geom_segment(aes(x=15.5,y=CompetenceMeans[dat$cluster,1],xend=16.5,yend=CompetenceMeans[dat$cluster,1]), linewidth = 0.8) +
+  geom_text(aes(x = Number, 0.1, label = Competencies, hjust = "left")) +
+  labs(x = "Kompetenzen", y = "Mittelwerte d. Kompetenzen") + 
+  geom_text(aes(label = round(IndividualCompetencies, digits = 2)), hjust=-0.25) + theme_minimal()
+plot + coord_flip()
+ggsave('plot.png') # , width = 1000, height = 800, units = "px" 
 
 # Erklaehrungen fuer die BGM-Maßnahmen
 Texte <- c("Verhaltensprävention: Es gibt eine Vielzahl an Möglichkeiten für die Gestaltung eines aktiven Lebensstils. Sollten Sie in Ihrer Arbeit viel sitzen, so können Sie Ihr Muskel-Skelett-System entlasten, indem Sie regelmäßige Pausen machen, um kurz aufzustehen, oder sich zu strecken. Für die Steigerung der körperlichen Fitness empfiehlt die Deutsche Gesellschaft für Sportmedizin und Prävention, etwa 10.000 Schritte am Tag hinzulegen und 150 Minuten körperliche Aktivität pro Woche. Verhältnisprävention: Viele Arbeitgeber bieten Maßnahmen an, um Sie in der aktiven Lebensgestaltung zu unterstützen. Dazu gehören: Firmenläufe, Sportkurse nach der Arbeit oder auch die Förderung privater Sportangebote durch verbilligte Mitgliedschaften bei diversen Fitnessstudios oder anderen Dienstleistern wie dem Urban Sports Club.",
@@ -323,11 +364,11 @@ Names <-  c("Sport", "Stress", "Ernährung", "Sucht", "Arbeitsunfälle", "Atmosp
 BGM_Texts <- data.frame(Names, Texte)
 
 # Fuer den Output, nach den fuenf hoechstgerankten Maßnahmen die Texte auswaehlen
-BGM1 <- BGM_Texts[which(BGM_Texts$Names == PersonRanking[1]),]$Texte
-BGM2 <- BGM_Texts[which(BGM_Texts$Names == PersonRanking[2]),]$Texte
-BGM3 <- BGM_Texts[which(BGM_Texts$Names == PersonRanking[3]),]$Texte
-BGM4 <- BGM_Texts[which(BGM_Texts$Names == PersonRanking[4]),]$Texte
-BGM5 <- BGM_Texts[which(BGM_Texts$Names == PersonRanking[5]),]$Texte
+BGM1 <- BGM_Texts[which(BGM_Texts$Names == Person$Names[1]),]$Texte
+BGM2 <- BGM_Texts[which(BGM_Texts$Names == Person$Names[2]),]$Texte
+BGM3 <- BGM_Texts[which(BGM_Texts$Names == Person$Names[3]),]$Texte
+BGM4 <- BGM_Texts[which(BGM_Texts$Names == Person$Names[4]),]$Texte
+BGM5 <- BGM_Texts[which(BGM_Texts$Names == Person$Names[5]),]$Texte
 #BGM_Texts[which(BGM_Texts$Names == Person$Names[2]),]
 #print(BGM_Texts$Names)
 #print(Person$Names[1])
@@ -375,12 +416,12 @@ Comp_16 <- getComp(Low_High[16])
 #                  "Sie gehören zu der Gruppe (Personen mit ähnlichem Arbeitsprofil) mit der höchsten Arbeitszufriedenheit und einem hohen Arbeitsengagement. Allerdings besteht in Ihrer Gruppe auch die höchste Angst vor Arbeitsplatzverlust und auch die persönliche Belastung ist in Ihrer Gruppe am höchsten. Allgemein zeigt sich, dass in Ihrem Arbeitskontext alle New Work Settings (Digitalisierung, Flexibilisierung, Agilität und Demokratisierung) eine bedeutende Rolle spielen.")
 #Cluster = Cluster_Text[dat$cluster],
 #String <- paste("../../Cluster_", dat$cluster, ".png", sep = "")
-#Clusterframe_ <- Clusterframe_1
-#if(dat$cluster == 2) { Clusterframe_ <- Clusterframe_2 }
-#if(dat$cluster == 3) { Clusterframe_ <- Clusterframe_3 }
-#if(dat$cluster == 4) { Clusterframe_ <- Clusterframe_4 }
-#if(dat$cluster == 5) { Clusterframe_ <- Clusterframe_5 }
-#if(dat$cluster == 6) { Clusterframe_ <- Clusterframe_6 }
+Clusterframe_ <- Clusterframe_1
+if(dat$cluster == 2) { Clusterframe_ <- Clusterframe_2 }
+if(dat$cluster == 3) { Clusterframe_ <- Clusterframe_3 }
+if(dat$cluster == 4) { Clusterframe_ <- Clusterframe_4 }
+if(dat$cluster == 5) { Clusterframe_ <- Clusterframe_5 }
+if(dat$cluster == 6) { Clusterframe_ <- Clusterframe_6 }
 #test
 #String <- "Führung"
 #Encoding(String)
@@ -390,12 +431,12 @@ Comp_16 <- getComp(Low_High[16])
 #Encoding(String)
 #print(String)
 #ClusterPlot <- readPNG(String)
-#colnames(Clusterframe_) <- c("Zeitl Flexibiliät", "Oertliche_Flex", "Erreichbarkeit",
-#                             "Pro-/Reaktivitaet", "Agile Methoden", "Organisationsstruktur",
-##                             "Autonomie", "Partizipation", "Virtuelle Zusammenarbeit",
- #                            "IKT Nutzung & Vernetzung", "Automation")
-#String <- paste("ClusterPlot.png", sep = "")
-#png(file=String, width = 500, height = 500)
+colnames(Clusterframe_) <- c("Zeitl Flexibiliät", "Oertliche_Flex", "Erreichbarkeit",
+                             "Pro-/Reaktivitaet", "Agile Methoden", "Organisationsstruktur",
+                             "Autonomie", "Partizipation", "Virtuelle Zusammenarbeit",
+                             "IKT Nutzung & Vernetzung", "Automation")
+String <- paste("ClusterPlot.png", sep = "")
+png(file=String, width = 500, height = 500)
 #radarchart(Clusterframe_,
 #           # Make the grid
 #           cglty = 1, cglcol = "black",
@@ -404,8 +445,8 @@ Comp_16 <- getComp(Low_High[16])
 #           # Text Labels
 #           axistype = 1, caxislabels=seq(0,10,2), axislabcol = "black", calcex = 2)
 # This function is required to save the files correctly
-#fmsb::radarchart(Clusterframe_)
-#dev.off()
+fmsb::radarchart(Clusterframe_)
+dev.off()
 
 # Output weitergeben
 result <- data.frame(Bgm1 = BGM1,
@@ -413,11 +454,11 @@ result <- data.frame(Bgm1 = BGM1,
                      Bgm3 = BGM3,
                      Bgm4 = BGM4,
                      Bgm5 = BGM5,                     
-                     Name1 = PersonRanking[1],
-                     Name2 = PersonRanking[2],
-                     Name3 = PersonRanking[3],
-                     Name4 = PersonRanking[4],
-                     Name5 = PersonRanking[5],
+                     Name1 = Person$Names[1],
+                     Name2 = Person$Names[2],
+                     Name3 = Person$Names[3],
+                     Name4 = Person$Names[4],
+                     Name5 = Person$Names[5],
                      Comp1 = Comp_1,
                      Comp2 = Comp_2,
                      Comp3 = Comp_3,
@@ -434,45 +475,45 @@ result <- data.frame(Bgm1 = BGM1,
                      Comp14 = Comp_14,
                      Comp15 = Comp_15,
                      Comp16 = Comp_16,
-                     CompVal1 = dat$AGK_Planung,
-                     CompVal2 = dat$AGK_Selbstmotivierung,
-                     CompVal3 = dat$AGK_Stressvermeidung,
-                     CompVal4 = dat$PsyEmp_Bedeutsamkeit,
-                     CompVal5 = dat$PsyEmp_Einfluss,
-                     CompVal6 = dat$PsyEmp_Kompetenz,
-                     CompVal7 = dat$PsyEmp_Selbstbestimmung,
-                     CompVal8 = dat$DigKomp_Verarbeitung,
-                     CompVal9 = dat$DigKomp_Kommunikation,
-                     CompVal10 = dat$DigKomp_Erstellung,
-                     CompVal11 = dat$DigKomp_Sicherheit,
-                     CompVal12 = dat$DigKomp_Problemloesung,
-                     CompVal13 = dat$HoL_Achtsamkeit,
-                     CompVal14 = dat$HoL_Verhalten,
-                     CompVal15 = dat$Resilienz,
-                     CompVal16 = dat$GesKomp,
-                     RefVal1 = AGK_Planung_v,
-                     RefVal2 = AGK_Selbstmotivierung_v,
-                     RefVal3 = AGK_Stressvermeidung_v,
-                     RefVal4 = PsyEmp_Bedeutsamkeit_v,
-                     RefVal5 = PsyEmp_Einfluss_v,
-                     RefVal6 = PsyEmp_Kompetenz_v,
-                     RefVal7 = PsyEmp_Selbstbestimmung_v,
-                     RefVal8 = DigKomp_Verarbeitung_v,
-                     RefVal9 = DigKomp_Kommunikation_v,
-                     RefVal10 = DigKomp_Erstellung_v,
-                     RefVal11 = DigKomp_Sicherheit_v,
-                     RefVal12 = DigKomp_Problemloesung_v,
-                     RefVal13 = HoL_Achtsamkeit_v,
-                     RefVal14 = HoL_Verhalten_v,
-                     RefVal15 = Resilienz_v,
-                     RefVal16 = GesKomp_v,
-                     Cluster1 = Clusterframe_[3,1],
-                     Cluster2 = Clusterframe_[3,2],
-                     Cluster3 = Clusterframe_[3,3],
-                     Cluster4 = Clusterframe_[3,4],
-                     Cluster5 = Clusterframe_[3,5],
-                     Cluster6 = Clusterframe_[3,6],
-                     Cluster7 = Clusterframe_[3,7],
+                     CompVal1 = IndividualCompetencies[1]/5,
+                     CompVal2 = IndividualCompetencies[2]/5,
+                     CompVal3 = IndividualCompetencies[3]/5,
+                     CompVal4 = IndividualCompetencies[4]/5,
+                     CompVal5 = IndividualCompetencies[5]/5,
+                     CompVal6 = IndividualCompetencies[6]/5,
+                     CompVal7 = IndividualCompetencies[7]/5,
+                     CompVal8 = IndividualCompetencies[8]/5,
+                     CompVal9 = IndividualCompetencies[9]/5,
+                     CompVal10 = IndividualCompetencies[10]/5,
+                     CompVal11 = IndividualCompetencies[11]/5,
+                     CompVal12 = IndividualCompetencies[12]/5,
+                     CompVal13 = IndividualCompetencies[13]/5,
+                     CompVal14 = IndividualCompetencies[14]/5,
+                     CompVal15 = IndividualCompetencies[15]/5,
+                     CompVal16 = IndividualCompetencies[16]/5,
+                     RefVal1 = CompetenceMeans[dat$cluster,1]/5,
+                     RefVal2 = CompetenceMeans[dat$cluster,2]/5,
+                     RefVal3 = CompetenceMeans[dat$cluster,3]/5,
+                     RefVal4 = CompetenceMeans[dat$cluster,4]/5,
+                     RefVal5 = CompetenceMeans[dat$cluster,5]/5,
+                     RefVal6 = CompetenceMeans[dat$cluster,6]/5,
+                     RefVal7 = CompetenceMeans[dat$cluster,7]/5,
+                     RefVal8 = CompetenceMeans[dat$cluster,8]/5,
+                     RefVal9 = CompetenceMeans[dat$cluster,9]/5,
+                     RefVal10 = CompetenceMeans[dat$cluster,10]/5,
+                     RefVal11 = CompetenceMeans[dat$cluster,11]/5,
+                     RefVal12 = CompetenceMeans[dat$cluster,12]/5,
+                     RefVal13 = CompetenceMeans[dat$cluster,13]/5,
+                     RefVal14 = CompetenceMeans[dat$cluster,14]/5,
+                     RefVal15 = CompetenceMeans[dat$cluster,15]/5,
+                     RefVal16 = CompetenceMeans[dat$cluster,16]/5,
+                     Cluster1 = ZeitlFlexibilitaet,
+                     Cluster2 = OertlicheFlexibiltaet,
+                     Cluster3 = Erreichbarkeit,
+                     Cluster4 = ProReaktivitaet,
+                     Cluster5 = AgileMethoden,
+                     Cluster6 = Organisationsstruktur,
+                     Cluster7 = Autonomie,
                      Cluster8 = Clusterframe_[3,8],
                      Cluster9 = Clusterframe_[3,9],
                      Cluster10 = Clusterframe_[[10]][3],
