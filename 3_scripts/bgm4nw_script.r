@@ -50,7 +50,9 @@ Clusterframe_5 <- subset(Clusterframe_5, select = -c(X))
 Clusterframe_6 <- data.frame(read.csv("../../clusterframe_6.csv"))
 Clusterframe_6 <- subset(Clusterframe_6, select = -c(X))
 
-#### Zuweisung der Person zu einem Cluster #### --------------------------------
+#### Erstellen des NW-Profiles für eine Person #### --------------------------------
+
+
 # Laden des Random-Forest-Modells
 rf_model <- readRDS("../../rf_model_cluster.rds")
 # Variablen umbenennen (bei allen Variablennamen Endung "-0" entfernen)
