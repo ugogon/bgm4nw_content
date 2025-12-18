@@ -119,20 +119,47 @@ AGK_Planung_v <- mean(AGK_Planung_values, na.rm = TRUE)
 AGK_Selbstmotivierung_values <- ifelse(df$Demo1OrgStr_mean <= Organisationsstruktur + 1 & df$Demo1OrgStr_mean >= Organisationsstruktur - 1, df$Demo1OrgStr_mean, NA)
 AGK_Selbstmotivierung_v <- mean(AGK_Selbstmotivierung_values, na.rm = TRUE)
 
-AGK_Stressvermeidung
-PsyEmp_Bedeutsamkeit
-PsyEmp_Einfluss
-PsyEmp_Kompetenz
-PsyEmp_Selbstbestimmung
-DigKomp_Verarbeitung
-DigKomp_Kommunikation
-DigKomp_Erstellung
-DigKomp_Sicherheit
-DigKomp_Problemloesung
-HoL_Achtsamkeit
-HoL_Verhalten
-Resilienz
-GesKomp
+AGK_Stressvermeidung_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
+AGK_Stressvermeidung_v <- mean(asdf, na.rm = TRUE)
+
+PsyEmp_Bedeutsamkeit_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
+PsyEmp_Bedeutsamkeit_v <- mean(asdf, na.rm = TRUE)
+
+PsyEmp_Einfluss_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
+PsyEmp_Einfluss_v <- mean(asdf, na.rm = TRUE)
+
+PsyEmp_Kompetenz_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
+PsyEmp_Kompetenz_v <- mean(asdf, na.rm = TRUE)
+
+PsyEmp_Selbstbestimmung_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
+PsyEmp_Selbstbestimmung_v <- mean(asdf, na.rm = TRUE)
+
+DigKomp_Verarbeitung_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
+DigKomp_Verarbeitung_v <- mean(asdf, na.rm = TRUE)
+
+DigKomp_Kommunikation_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
+DigKomp_Kommunikation_v <- mean(asdf, na.rm = TRUE)
+
+DigKomp_Erstellung_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
+DigKomp_Erstellung_v <- mean(asdf, na.rm = TRUE)
+
+DigKomp_Sicherheit_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
+DigKomp_Sicherheit_v <- mean(asdf, na.rm = TRUE)
+
+DigKomp_Problemloesung_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
+DigKomp_Problemloesung_v <- mean(asdf, na.rm = TRUE)
+
+HoL_Achtsamkeit_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
+HoL_Achtsamkeit_v <- mean(asdf, na.rm = TRUE)
+
+HoL_Verhalten_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
+HoL_Verhalten_v <- mean(asdf, na.rm = TRUE)
+
+Resilienz_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
+Resilienz_v <- mean(asdf, na.rm = TRUE)
+
+GesKomp_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
+GesKomp_v <- mean(asdf, na.rm = TRUE)
 
 #print(AGK_Planung_v)
 #print(df$Flex1_mean_z)
