@@ -190,6 +190,38 @@ updateRanking <- function(number, cl)
   c <- cl
 
   # Durchgehen aller Maßnahmen und vergeben der Punkte
+  ifelse(AGK_Planung <= AGK_Planung_v, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
+  ifelse(asdf <= asdf, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
+  ifelse(asdf <= asdf, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
+  ifelse(asdf <= asdf, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
+  ifelse(asdf <= asdf, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
+  ifelse(asdf <= asdf, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
+  ifelse(asdf <= asdf, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
+  ifelse(asdf <= asdf, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
+  ifelse(asdf <= asdf, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
+  ifelse(asdf <= asdf, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
+  ifelse(asdf <= asdf, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
+  ifelse(asdf <= asdf, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
+  ifelse(asdf <= asdf, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
+  ifelse(asdf <= asdf, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
+  ifelse(asdf <= asdf, Multiplicator[0] <- Multiplicator[0] - 1, Multiplicator[0] <- Multiplicator[0] + 1)
+  
+  AGK_Selbstmotivierung
+  AGK_Stressvermeidung
+  PsyEmp_Bedeutsamkeit
+  PsyEmp_Einfluss
+  PsyEmp_Kompetenz
+  PsyEmp_Selbstbestimmung
+  DigKomp_Verarbeitung
+  DigKomp_Kommunikation
+  DigKomp_Erstellung
+  DigKomp_Sicherheit
+  DigKomp_Problemloesung
+  HoL_Achtsamkeit
+  HoL_Verhalten
+  Resilienz
+  GesKomp
+  
   for(x in 1:16)
   {
     LowB <- CompetenceMeans[,x][c] - DeviationMeans[,x][c]
