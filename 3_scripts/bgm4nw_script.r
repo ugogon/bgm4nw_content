@@ -115,7 +115,10 @@ dat <- dat %>%
 #AGK_Planung ZeitlFlex
 AGK_Planung_values <- ifelse(df$Flex1_mean_z <= ZeitlFlexibilitaet + 1 & df$Flex1_mean_z >= ZeitlFlexibilitaet - 1, df$KR1AGK_Planung_mean, NA)
 AGK_Planung_v <- mean(AGK_Planung_values, na.rm = TRUE)
-AGK_Selbstmotivierung
+
+AGK_Selbstmotivierung_values <- ifelse(df$Demo1OrgStr_mean <= Organisationsstruktur + 1 & df$Demo1OrgStr_mean >= Organisationsstruktur - 1, df$Demo1OrgStr_mean, NA)
+AGK_Selbstmotivierung_v <- mean(AGK_Selbstmotivierung_values, na.rm = TRUE)
+
 AGK_Stressvermeidung
 PsyEmp_Bedeutsamkeit
 PsyEmp_Einfluss
