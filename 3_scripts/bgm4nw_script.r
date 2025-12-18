@@ -125,7 +125,7 @@ AGK_Stressvermeidung_v <- mean(AGK_Stressvermeidung_values, na.rm = TRUE)
 PsyEmp_Bedeutsamkeit_values <- ifelse(df$Demo3Partizipation_mean <= Partizipation + 1 & df$Demo3Partizipation_mean >= Partizipation - 1, df$Demo3Partizipation_mean, NA)
 PsyEmp_Bedeutsamkeit_v <- mean(PsyEmp_Bedeutsamkeit_values, na.rm = TRUE)
 
-PsyEmp_Einfluss_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
+PsyEmp_Einfluss_values <- ifelse(df$Demo3Partizipation_mean <= Partizipation + 1 & df$Demo3Partizipation_mean >= Partizipation - 1, df$Demo3Partizipation_mean, NA)
 PsyEmp_Einfluss_v <- mean(PsyEmp_Einfluss_values, na.rm = TRUE)
 
 PsyEmp_Kompetenz_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
