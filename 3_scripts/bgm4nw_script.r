@@ -76,7 +76,7 @@ IktNutzungVernetzung <- mean(dat$Digi3IKTNutzung1, dat$Digi3IKTNutzung2, dat$Dig
 Automation <- mean(dat$Digi3IKTAutomation1, dat$Digi3IKTAutomation2, dat$Digi3IKTAutomation3, dat$Digi3IKTAutomation4)
 
 # Laden des Random-Forest-Modells
-rf_model <- readRDS("../../rf_model_cluster.rds")
+#rf_model <- readRDS("../../rf_model_cluster.rds")
 # Variablen umbenennen (bei allen Variablennamen Endung "-0" entfernen)
 names(dat) <- gsub(".0$", "", names(dat))  
 
@@ -109,12 +109,12 @@ dat <- dat %>%
   mutate(GesKomp = rowMeans(across(T2_KR3GesKomp1:T2_KR3GesKomp6)))
   
 # Nötige Variablen auswählen
-items_clust <- dat[, short_form_items$items]
+#items_clust <- dat[, short_form_items$items]
 # Items standardisieren
-new_data_z <- scale(items_clust, center = short_form_items$center, scale = short_form_items$scale)
+#new_data_z <- scale(items_clust, center = short_form_items$center, scale = short_form_items$scale)
 
 # Zuweisung der Person zu den Clustern via Random-Forest-Modelle
-dat$cluster <- predict(rf_model, newdata = new_data_z)
+#dat$cluster <- predict(rf_model, newdata = new_data_z)
 
 # updateRanking - Funktion für die individuelle Reihung der Maßnahmen für eine Person
 updateRanking <- function(number, cl)
