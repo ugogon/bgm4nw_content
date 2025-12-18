@@ -353,7 +353,11 @@ BGM4 <- BGM_Texts[which(BGM_Texts$Names == Personframe$Names[4]),]$Texte
 BGM5 <- BGM_Texts[which(BGM_Texts$Names == Personframe$Names[5]),]$Texte
 
 BGM1 <- toString(BGM1)
-print(BGM1)
+BGM2 <- toString(BGM2)
+BGM3 <- toString(BGM3)
+BGM4 <- toString(BGM4)
+BGM5 <- toString(BGM5)
+
 #BGM_Texts[which(BGM_Texts$Names == Person$Names[2]),]
 #print(BGM_Texts$Names)
 #print(Person$Names[1])
