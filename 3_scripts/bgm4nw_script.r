@@ -53,17 +53,27 @@ Clusterframe_6 <- subset(Clusterframe_6, select = -c(X))
 #### Erstellen des NW-Profiles für eine Person #### --------------------------------
 #Output.Variable  Name
 #Cluster 01 ZeitlFlexibilitaet
+ZeitlFlexibilitaet <- mean()
 #Cluster 02 OertlicheFlexibiltaet
+OertlicheFlexibiltaet <- mean()
 #Cluster 03 Erreichbarkeit
+Erreichbarkeit <- mean()
 #Cluster 04 ProReaktivitaet
+ProReaktivitaet <- mean()
 #Cluster 05 AgileMethoden
+AgileMethoden <- mean()
 #Cluster 06 Organisationsstruktur
+Organisationsstruktur <- mean()
 #Cluster 07 Autonomie
+Autonomie <- mean()
 #Cluster 08 Partizipation
+Partizipation <- mean()
 #Cluster 09 VirtuelleZusammenarbeit
 VirtuelleZusammenarbeit <- mean(Digi1IKTHaeuf3, Digi1IKTHaeuf4, Digi1IKTHaeuf5, Digi1IKTHaeuf6, Digi1IKTHaeuf7)
 #Cluster 10 IktNutzungVernetzung
+IktNutzungVernetzung <- mean()
 #Cluster 11 Automation
+Automation <- mean()
 
 # Laden des Random-Forest-Modells
 rf_model <- readRDS("../../rf_model_cluster.rds")
