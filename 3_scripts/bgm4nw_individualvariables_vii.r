@@ -212,7 +212,7 @@ setCluster <- function(variable)
 
 # Ranking für die Person im passenden Cluster
 Person <- setCluster(dat$cluster)
-print(Person)
+#print(Person)
 Testperson <- dat %>% dplyr::select(AGK_Planung:GesKomp) # Auswahl der Variablen für das Ranking
 RankingUpdates <- updateRanking(Testperson, dat$cluster) # Individualisierung des Rankings
 Person$Ranking <- Person$Ranking + RankingUpdates
