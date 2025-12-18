@@ -55,27 +55,27 @@ Clusterframe_6 <- subset(Clusterframe_6, select = -c(X))
 #### Erstellen des NW-Profiles für eine Person #### --------------------------------
 #Output.Variable  Name
 #Cluster 01 ZeitlFlexibilitaet
-ZeitlFlexibilitaet <- mean(Flex1ze1, Flex1ze2)
+ZeitlFlexibilitaet <- mean(dat$Flex1ze1, dat$Flex1ze2)
 #Cluster 02 OertlicheFlexibiltaet
-OertlicheFlexibiltaet <- mean(Flex2oe1a, Flex2oe1b, Flex2oe1c)
+OertlicheFlexibiltaet <- mean(dat$Flex2oe1a, dat$Flex2oe1b, dat$Flex2oe1c)
 #Cluster 03 Erreichbarkeit
-Erreichbarkeit <- mean(Flex4E1, Flex4E2, Flex4E3, Flex4E4, Flex4E5)
+Erreichbarkeit <- mean(dat$Flex4E1, dat$Flex4E2, dat$Flex4E3, dat$Flex4E4, dat$Flex4E5)
 #Cluster 04 ProReaktivitaet
-ProReaktivitaet <- mean(AGIL1Pro1, AGIL1Pro2, AGIL1Re)
+ProReaktivitaet <- mean(dat$AGIL1Pro1, dat$AGIL1Pro2, dat$AGIL1Re)
 #Cluster 05 AgileMethoden
 AgileMethoden <- ifelse(is.na(dat$AGIL2AgilMeth_scale), 1, dat$AGIL2AgilMeth_scale) 
 #Cluster 06 Organisationsstruktur
-Organisationsstruktur <- mean(Demo1OrgStr1, Demo1OrgStr2, Demo1OrgStr3, Demo1OrgStr4, Demo1OrgStrB)
+Organisationsstruktur <- mean(dat$Demo1OrgStr1, dat$Demo1OrgStr2, dat$Demo1OrgStr3, dat$Demo1OrgStr4, dat$Demo1OrgStrB)
 #Cluster 07 Autonomie
-Autonomie <- mean(Demo4Auto1, Demo4Auto2, Demo4Auto3, Demo4Auto4, Demo4Auto5, Demo4Auto6, Demo4Auto7, Demo4Auto8, Demo4Auto9)
+Autonomie <- mean(dat$Demo4Auto1, dat$Demo4Auto2, dat$Demo4Auto3, dat$Demo4Auto4, dat$Demo4Auto5, dat$Demo4Auto6, dat$Demo4Auto7, dat$Demo4Auto8, dat$Demo4Auto9)
 #Cluster 08 Partizipation
-Partizipation <- mean(Demo3Parti1, Demo3Parti2, Demo3Parti3, Demo3Parti4, Demo3Parti5)
+Partizipation <- mean(dat$Demo3Parti1, dat$Demo3Parti2, dat$Demo3Parti3, dat$Demo3Parti4, dat$Demo3Parti5)
 #Cluster 09 VirtuelleZusammenarbeit
-VirtuelleZusammenarbeit <- mean(Digi1IKTHaeuf3, Digi1IKTHaeuf4, Digi1IKTHaeuf5, Digi1IKTHaeuf6, Digi1IKTHaeuf7)
+VirtuelleZusammenarbeit <- mean(dat$Digi1IKTHaeuf3, dat$Digi1IKTHaeuf4, dat$Digi1IKTHaeuf5, dat$Digi1IKTHaeuf6, dat$Digi1IKTHaeuf7)
 #Cluster 10 IktNutzungVernetzung
-IktNutzungVernetzung <- mean(Digi3IKTNutzung1, Digi3IKTNutzung2, Digi3IKTVernetzung)
+IktNutzungVernetzung <- mean(dat$Digi3IKTNutzung1, dat$Digi3IKTNutzung2, dat$Digi3IKTVernetzung)
 #Cluster 11 Automation
-Automation <- mean(Digi3IKTAutomation1, Digi3IKTAutomation2, Digi3IKTAutomation3, Digi3IKTAutomation4)
+Automation <- mean(dat$Digi3IKTAutomation1, dat$Digi3IKTAutomation2, dat$Digi3IKTAutomation3, dat$Digi3IKTAutomation4)
 
 # Laden des Random-Forest-Modells
 rf_model <- readRDS("../../rf_model_cluster.rds")
