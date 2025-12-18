@@ -351,7 +351,7 @@ BGM2 <- BGM_Texts[which(BGM_Texts$Names == Personframe$Names[2]),]$Texte
 BGM3 <- BGM_Texts[which(BGM_Texts$Names == Personframe$Names[3]),]$Texte
 BGM4 <- BGM_Texts[which(BGM_Texts$Names == Personframe$Names[4]),]$Texte
 BGM5 <- BGM_Texts[which(BGM_Texts$Names == Personframe$Names[5]),]$Texte
-typeof(BGM5)
+
 #BGM_Texts[which(BGM_Texts$Names == Person$Names[2]),]
 #print(BGM_Texts$Names)
 #print(Person$Names[1])
