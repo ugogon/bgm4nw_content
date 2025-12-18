@@ -280,7 +280,7 @@ RankingUpdates <- updateRanking(Testperson) # Individualisierung des Rankings
 PersonRanking <- c(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) + RankingUpdates
 Names <-  c("Sport", "Stress", "Ernährung", "Sucht", "Arbeitsunfälle", "Atmosphäre", "Weiterbildungen",
             "Ergonomie", "IKT", "Technostress", "Familie", "Eltern", "Kinderbetreuung", "Frauen", "WLB")
-Personframe <- data.frame(PersonRanking)
+Personframe <- data.frame(Names, PersonRanking)
 PersonRanking <- order(PersonRanking, decreasing=TRUE) # Ordnung des Rankings
 
 # Informationen zu den Kompetenzen einfügen
