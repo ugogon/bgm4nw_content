@@ -342,11 +342,11 @@ Names <-  c("Sport", "Stress", "Ernährung", "Sucht", "Arbeitsunfälle", "Atmosp
 BGM_Texts <- data.frame(Names, Texte)
 
 # Fuer den Output, nach den fuenf hoechstgerankten Maßnahmen die Texte auswaehlen
-BGM1 <- BGM_Texts[which(BGM_Texts$Names == Person$Names[1]),]$Texte
-BGM2 <- BGM_Texts[which(BGM_Texts$Names == Person$Names[2]),]$Texte
-BGM3 <- BGM_Texts[which(BGM_Texts$Names == Person$Names[3]),]$Texte
-BGM4 <- BGM_Texts[which(BGM_Texts$Names == Person$Names[4]),]$Texte
-BGM5 <- BGM_Texts[which(BGM_Texts$Names == Person$Names[5]),]$Texte
+BGM1 <- BGM_Texts[which(BGM_Texts$Names == PersonRanking[1]),]$Texte
+BGM2 <- BGM_Texts[which(BGM_Texts$Names == PersonRanking[2]),]$Texte
+BGM3 <- BGM_Texts[which(BGM_Texts$Names == PersonRanking[3]),]$Texte
+BGM4 <- BGM_Texts[which(BGM_Texts$Names == PersonRanking[4]),]$Texte
+BGM5 <- BGM_Texts[which(BGM_Texts$Names == PersonRanking[5]),]$Texte
 #BGM_Texts[which(BGM_Texts$Names == Person$Names[2]),]
 #print(BGM_Texts$Names)
 #print(Person$Names[1])
@@ -394,12 +394,7 @@ Comp_16 <- getComp(Low_High[16])
 #                  "Sie gehören zu der Gruppe (Personen mit ähnlichem Arbeitsprofil) mit der höchsten Arbeitszufriedenheit und einem hohen Arbeitsengagement. Allerdings besteht in Ihrer Gruppe auch die höchste Angst vor Arbeitsplatzverlust und auch die persönliche Belastung ist in Ihrer Gruppe am höchsten. Allgemein zeigt sich, dass in Ihrem Arbeitskontext alle New Work Settings (Digitalisierung, Flexibilisierung, Agilität und Demokratisierung) eine bedeutende Rolle spielen.")
 #Cluster = Cluster_Text[dat$cluster],
 #String <- paste("../../Cluster_", dat$cluster, ".png", sep = "")
-Clusterframe_ <- Clusterframe_1
-if(dat$cluster == 2) { Clusterframe_ <- Clusterframe_2 }
-if(dat$cluster == 3) { Clusterframe_ <- Clusterframe_3 }
-if(dat$cluster == 4) { Clusterframe_ <- Clusterframe_4 }
-if(dat$cluster == 5) { Clusterframe_ <- Clusterframe_5 }
-if(dat$cluster == 6) { Clusterframe_ <- Clusterframe_6 }
+
 #test
 #String <- "Führung"
 #Encoding(String)
@@ -409,13 +404,7 @@ if(dat$cluster == 6) { Clusterframe_ <- Clusterframe_6 }
 #Encoding(String)
 #print(String)
 #ClusterPlot <- readPNG(String)
-colnames(Clusterframe_) <- c("Zeitl Flexibiliät", "Oertliche_Flex", "Erreichbarkeit",
-                             "Pro-/Reaktivitaet", "Agile Methoden", "Organisationsstruktur",
-                             "Autonomie", "Partizipation", "Virtuelle Zusammenarbeit",
-                             "IKT Nutzung & Vernetzung", "Automation")
-String <- paste("ClusterPlot.png", sep = "")
-png(file=String, width = 500, height = 500)
-#radarchart(Clusterframe_,
+
 #           # Make the grid
 #           cglty = 1, cglcol = "black",
 #           # Make the polygon
@@ -423,8 +412,7 @@ png(file=String, width = 500, height = 500)
 #           # Text Labels
 #           axistype = 1, caxislabels=seq(0,10,2), axislabcol = "black", calcex = 2)
 # This function is required to save the files correctly
-fmsb::radarchart(Clusterframe_)
-dev.off()
+
 
 # Output weitergeben
 result <- data.frame(Bgm1 = BGM1,
