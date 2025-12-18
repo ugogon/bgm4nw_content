@@ -420,7 +420,7 @@ Comp_16 <- getComp(Low_High[16])
 
 
 # Output weitergeben
-result <- data.frame(Bgm1 = toString(BGM1),
+result <- data.frame(Bgm1 = BGM1,
                      Bgm2 = BGM2,
                      Bgm3 = BGM3,
                      Bgm4 = BGM4,
