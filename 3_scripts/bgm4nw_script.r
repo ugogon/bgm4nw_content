@@ -420,7 +420,11 @@ Comp_16 <- getComp(Low_High[16])
 
 
 # Output weitergeben
-result <- data.frame(                   
+result <- data.frame(Bgm1 = BGM1,
+                     Bgm2 = BGM2,
+                     Bgm3 = BGM3,
+                     Bgm4 = BGM4,
+                     Bgm5 = BGM5,                     
                      Name1 = Personframe$Names[1],
                      Name2 = Personframe$Names[2],
                      Name3 = Personframe$Names[3],
