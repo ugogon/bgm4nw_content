@@ -284,7 +284,7 @@ Names <-  c("Sport", "Stress", "Ernährung", "Sucht", "Arbeitsunfälle", "Atmosp
             "Ergonomie", "IKT", "Technostress", "Familie", "Eltern", "Kinderbetreuung", "Frauen", "WLB")
 Personframe <- data.frame(Names, PersonRanking)
 PersonRanking <- order(PersonRanking, decreasing=TRUE) # Ordnung des Rankings
-Personframe <- Person[order(Personframe$PersonRanking, decreasing=TRUE),] # Ordnung des Rankings
+Personframe <- Personframe[order(Personframe$PersonRanking, decreasing=TRUE),] # Ordnung des Rankings
 
 # Informationen zu den Kompetenzen einfügen
 Competencies <- c("Planungskompetenz", "Selbstmotivierungskompetenz", "Stressvermeidungskompetenz",
