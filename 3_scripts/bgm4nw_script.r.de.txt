@@ -133,7 +133,7 @@ PsyEmp_Einfluss_v <- mean(PsyEmp_Einfluss_values, na.rm = TRUE)
 PsyEmp_Kompetenz_values <- ifelse(df$Demo4Autonomie_mean <= Autonomie + 1 & df$Demo4Autonomie_mean >= Autonomie - 1, df$Demo4Autonomie_mean, NA)
 PsyEmp_Kompetenz_v <- mean(PsyEmp_Kompetenz_values, na.rm = TRUE)
 
-PsyEmp_Selbstbestimmung_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
+PsyEmp_Selbstbestimmung_values <- ifelse(df$Flex1oe_mean <= OertlicheFlexibiltaet + 1 & df$Flex1oe_mean >= OertlicheFlexibiltaet - 1, df$Flex1oe_mean, NA)
 PsyEmp_Selbstbestimmung_v <- mean(PsyEmp_Selbstbestimmung_values, na.rm = TRUE)
 
 DigKomp_Verarbeitung_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
