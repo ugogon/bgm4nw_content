@@ -115,7 +115,23 @@ dat <- dat %>%
 #AGK_Planung ZeitlFlex
 AGK_Planung_values <- ifelse(df$Flex1_mean_z <= ZeitlFlexibilitaet + 1 & df$Flex1_mean_z >= ZeitlFlexibilitaet - 1, df$KR1AGK_Planung_mean, NA)
 AGK_Planung_v <- mean(AGK_Planung_values, na.rm = TRUE)
-print(AGK_Planung_v)
+AGK_Selbstmotivierung
+AGK_Stressvermeidung
+PsyEmp_Bedeutsamkeit
+PsyEmp_Einfluss
+PsyEmp_Kompetenz
+PsyEmp_Selbstbestimmung
+DigKomp_Verarbeitung
+DigKomp_Kommunikation
+DigKomp_Erstellung
+DigKomp_Sicherheit
+DigKomp_Problemloesung
+HoL_Achtsamkeit
+HoL_Verhalten
+Resilienz
+GesKomp
+
+#print(AGK_Planung_v)
 #print(df$Flex1_mean_z)
 
 # Nötige Variablen auswählen
