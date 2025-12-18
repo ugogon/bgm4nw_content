@@ -144,22 +144,22 @@ DigKomp_Erstellung_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, d
 DigKomp_Erstellung_v <- mean(DigKomp_Erstellung_values, na.rm = TRUE)
 
 DigKomp_Sicherheit_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
-DigKomp_Sicherheit_v <- mean(asdf, na.rm = TRUE)
+DigKomp_Sicherheit_v <- mean(DigKomp_Sicherheit_values, na.rm = TRUE)
 
 DigKomp_Problemloesung_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
-DigKomp_Problemloesung_v <- mean(asdf, na.rm = TRUE)
+DigKomp_Problemloesung_v <- mean(DigKomp_Problemloesung_values, na.rm = TRUE)
 
 HoL_Achtsamkeit_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
-HoL_Achtsamkeit_v <- mean(asdf, na.rm = TRUE)
+HoL_Achtsamkeit_v <- mean(HoL_Achtsamkeit_values, na.rm = TRUE)
 
 HoL_Verhalten_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
-HoL_Verhalten_v <- mean(asdf, na.rm = TRUE)
+HoL_Verhalten_v <- mean(HoL_Verhalten_values, na.rm = TRUE)
 
 Resilienz_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
-Resilienz_v <- mean(asdf, na.rm = TRUE)
+Resilienz_v <- mean(Resilienz_values, na.rm = TRUE)
 
 GesKomp_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
-GesKomp_v <- mean(asdf, na.rm = TRUE)
+GesKomp_v <- mean(GesKomp_values, na.rm = TRUE)
 
 #print(AGK_Planung_v)
 #print(df$Flex1_mean_z)
