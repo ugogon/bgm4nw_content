@@ -283,7 +283,7 @@ Names <-  c("Sport", "Stress", "Ernährung", "Sucht", "Arbeitsunfälle", "Atmosp
 Personframe <- data.frame(Names, PersonRanking)
 PersonRanking <- order(PersonRanking, decreasing=TRUE) # Ordnung des Rankings
 Personframe <- Personframe[order(Personframe$PersonRanking, decreasing=TRUE),] # Ordnung des Rankings
-print(Personframe)
+
 # Informationen zu den Kompetenzen einfügen
 Competencies <- c("Planungskompetenz", "Selbstmotivierungskompetenz", "Stressvermeidungskompetenz",
                   "Bedeutsamkeit d. Arbeit", "Einfluss", "pers. Kompetenz", "Selbstbestimmung",
@@ -346,7 +346,7 @@ Names <-  c("Sport", "Stress", "Ernährung", "Sucht", "Arbeitsunfälle", "Atmosp
 BGM_Texts <- data.frame(Names, Texte)
 
 # Fuer den Output, nach den fuenf hoechstgerankten Maßnahmen die Texte auswaehlen
-BGM1 <- BGM_Texts[which(BGM_Texts$Names == PersonRanking[1]),]$Texte
+BGM1 <- BGM_Texts[which(BGM_Texts$Names == Personframe$Names[1]),]$Texte
 print(which(BGM_Texts$Names == PersonRanking[1]),)
 
 BGM2 <- BGM_Texts[which(BGM_Texts$Names == PersonRanking[2]),]$Texte
