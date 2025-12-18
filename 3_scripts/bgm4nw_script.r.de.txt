@@ -276,36 +276,10 @@ updateRanking <- function(number, cl)
   return(rank)
 }
 
-setCluster <- function(variable)
-{
-  ReturnVar <- Cluster1
-  if (variable == 2)
-  {
-    ReturnVar <- Cluster2
-  }
-  if (variable == 3)
-  {
-    ReturnVar <- Cluster3
-  }
-  if (variable == 4)
-  {
-    ReturnVar <- Cluster4
-  }
-  if (variable == 5)
-  {
-    ReturnVar <- Cluster5
-  }
-  if (variable == 6)
-  {
-    ReturnVar <- Cluster6
-  }
-  return(ReturnVar)
-}
 
 # Ranking für die Person im passenden Cluster
-Person <- setCluster(dat$cluster)
 Testperson <- dat %>% dplyr::select(AGK_Planung:GesKomp) # Auswahl der Variablen für das Ranking
-RankingUpdates <- updateRanking(Testperson, dat$cluster) # Individualisierung des Rankings
+RankingUpdates <- updateRanking(Testperson, c(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)) # Individualisierung des Rankings
 Person$Ranking <- Person$Ranking + RankingUpdates
 Person <- Person[order(Person$Ranking, decreasing=TRUE),] # Ordnung des Rankings
 
