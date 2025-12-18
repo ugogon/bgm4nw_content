@@ -295,7 +295,7 @@ IndividualCompetencies <- c(dat$AGK_Planung, dat$AGK_Selbstmotivierung, dat$AGK_
                             dat$DigKomp_Erstellung, dat$DigKomp_Sicherheit, dat$DigKomp_Problemloesung, 
                             dat$HoL_Achtsamkeit, dat$HoL_Verhalten, dat$Resilienz, dat$GesKomp)
 
-ClusterCompetencies <- as.vector(unlist(CompetenceMeans[dat$cluster, ])) # passende Means werden hier ausgewaehlt
+ClusterCompetencies <- data.frame(AGK_Planung_v, AGK_Selbstmotivierung_v, AGK_Stressvermeidung_v, PsyEmp_Bedeutsamkeit_v, PsyEmp_Einfluss_v, PsyEmp_Kompetenz_v, PsyEmp_Selbstbestimmung_v, DigKomp_Verarbeitung_v, DigKomp_Kommunikation_v, DigKomp_Erstellung_v, DigKomp_Sicherheit_v, DigKomp_Problemloesung_v, HoL_Achtsamkeit_v, HoL_Verhalten_v, Resilienz_v, GesKomp_v)
 
 # Für Visualisierung vorbereiten
 VisualisationFrame <- data.frame(Number, IndividualCompetencies, ClusterCompetencies, Competencies)
