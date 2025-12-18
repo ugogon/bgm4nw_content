@@ -351,7 +351,7 @@ BGM2 <- BGM_Texts[which(BGM_Texts$Names == Personframe$Names[2]),]$Texte
 BGM3 <- BGM_Texts[which(BGM_Texts$Names == Personframe$Names[3]),]$Texte
 BGM4 <- BGM_Texts[which(BGM_Texts$Names == Personframe$Names[4]),]$Texte
 BGM5 <- BGM_Texts[which(BGM_Texts$Names == Personframe$Names[5]),]$Texte
-
+print(BGM2)
 #BGM_Texts[which(BGM_Texts$Names == Person$Names[2]),]
 #print(BGM_Texts$Names)
 #print(Person$Names[1])
@@ -424,7 +424,7 @@ result <- data.frame(Bgm1 = BGM1,
                      Bgm2 = BGM2,
                      Bgm3 = BGM3,
                      Bgm4 = BGM4,
-                     Bgm5 = BGM5,                     
+                     Bgm5 = BGM5,                    
                      Name1 = Personframe$Names[1],
                      Name2 = Personframe$Names[2],
                      Name3 = Personframe$Names[3],
