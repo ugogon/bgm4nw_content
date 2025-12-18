@@ -67,9 +67,9 @@ AgileMethoden <- mean()
 #Cluster 06 Organisationsstruktur
 Organisationsstruktur <- mean()
 #Cluster 07 Autonomie
-Autonomie <- mean()
+Autonomie <- mean(Demo4Auto1, Demo4Auto2, Demo4Auto3, Demo4Auto4, Demo4Auto5, Demo4Auto6, Demo4Auto7, Demo4Auto8, Demo4Auto9)
 #Cluster 08 Partizipation
-Partizipation <- mean()
+Partizipation <- mean(Demo3Parti1, Demo3Parti2, Demo3Parti3, Demo3Parti4, Demo3Parti5)
 #Cluster 09 VirtuelleZusammenarbeit
 VirtuelleZusammenarbeit <- mean(Digi1IKTHaeuf3, Digi1IKTHaeuf4, Digi1IKTHaeuf5, Digi1IKTHaeuf6, Digi1IKTHaeuf7)
 #Cluster 10 IktNutzungVernetzung
