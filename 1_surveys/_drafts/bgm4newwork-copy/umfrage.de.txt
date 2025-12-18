@@ -10,7 +10,7 @@ Script: - file://czp0kx4yxx5iopkg
 
 ----
 
-Feedback: - page://vs7ciuosfo0nol7f
+Feedback: 
 
 ----
 
