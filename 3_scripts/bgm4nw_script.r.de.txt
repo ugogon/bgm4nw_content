@@ -61,11 +61,11 @@ OertlicheFlexibiltaet <- mean()
 #Cluster 03 Erreichbarkeit
 Erreichbarkeit <- mean()
 #Cluster 04 ProReaktivitaet
-ProReaktivitaet <- mean()
+ProReaktivitaet <- mean(AGIL1Pro1, AGIL1Pro2, AGIL1Re)
 #Cluster 05 AgileMethoden
-AgileMethoden <- mean()
+AgileMethoden <- ifelse(is.na(dat$AGIL2AgilMeth_scale), 1, dat$AGIL2AgilMeth_scale) 
 #Cluster 06 Organisationsstruktur
-Organisationsstruktur <- mean()
+Organisationsstruktur <- mean(Demo1OrgStr1, Demo1OrgStr2, Demo1OrgStr3, Demo1OrgStr4, Demo1OrgStrB)
 #Cluster 07 Autonomie
 Autonomie <- mean(Demo4Auto1, Demo4Auto2, Demo4Auto3, Demo4Auto4, Demo4Auto5, Demo4Auto6, Demo4Auto7, Demo4Auto8, Demo4Auto9)
 #Cluster 08 Partizipation
