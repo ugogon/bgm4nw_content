@@ -124,7 +124,7 @@ AGK_Selbstmotivierung_v <- mean(AGK_Selbstmotivierung_values, na.rm = TRUE)
 AGK_Stressvermeidung_values <- ifelse(df$Flex4E_mean <= Erreichbarkeit + 1 & df$Flex4E_mean >= Erreichbarkeit - 1, df$Flex4E_mean, NA)
 AGK_Stressvermeidung_v <- mean(AGK_Stressvermeidung_values, na.rm = TRUE)
 
-PsyEmp_Bedeutsamkeit_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
+PsyEmp_Bedeutsamkeit_values <- ifelse(df$Demo3Partizipation_mean <= Partizipation + 1 & df$Demo3Partizipation_mean >= Partizipation - 1, df$Demo3Partizipation_mean, NA)
 PsyEmp_Bedeutsamkeit_v <- mean(PsyEmp_Bedeutsamkeit_values, na.rm = TRUE)
 
 PsyEmp_Einfluss_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
