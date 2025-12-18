@@ -26,5 +26,5 @@ Error in file(file, "rt") : cannot open the connection
 Calls: data.frame -> read.csv -> read.table -> file
 In addition: Warning message:
 In file(file, "rt") :
-  cannot open file '../../competencemeans.csv': No such file or directory
+  cannot open file '../../short_form_items.csv': No such file or directory
 Execution halted
