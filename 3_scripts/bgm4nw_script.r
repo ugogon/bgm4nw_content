@@ -119,29 +119,29 @@ AGK_Planung_v <- mean(AGK_Planung_values, na.rm = TRUE)
 AGK_Selbstmotivierung_values <- ifelse(df$Demo1OrgStr_mean <= Organisationsstruktur + 1 & df$Demo1OrgStr_mean >= Organisationsstruktur - 1, df$Demo1OrgStr_mean, NA)
 AGK_Selbstmotivierung_v <- mean(AGK_Selbstmotivierung_values, na.rm = TRUE)
 
-AGK_Stressvermeidung_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
-AGK_Stressvermeidung_v <- mean(asdf, na.rm = TRUE)
+AGK_Stressvermeidung_values <- ifelse(df$Flex4E_mean <= Erreichbarkeit + 1 & df$Flex4E_mean >= Erreichbarkeit - 1, df$Flex4E_mean, NA)
+AGK_Stressvermeidung_v <- mean(AGK_Stressvermeidung_values, na.rm = TRUE)
 
 PsyEmp_Bedeutsamkeit_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
-PsyEmp_Bedeutsamkeit_v <- mean(asdf, na.rm = TRUE)
+PsyEmp_Bedeutsamkeit_v <- mean(PsyEmp_Bedeutsamkeit_values, na.rm = TRUE)
 
 PsyEmp_Einfluss_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
-PsyEmp_Einfluss_v <- mean(asdf, na.rm = TRUE)
+PsyEmp_Einfluss_v <- mean(PsyEmp_Einfluss_values, na.rm = TRUE)
 
 PsyEmp_Kompetenz_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
-PsyEmp_Kompetenz_v <- mean(asdf, na.rm = TRUE)
+PsyEmp_Kompetenz_v <- mean(PsyEmp_Kompetenz_values, na.rm = TRUE)
 
 PsyEmp_Selbstbestimmung_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
-PsyEmp_Selbstbestimmung_v <- mean(asdf, na.rm = TRUE)
+PsyEmp_Selbstbestimmung_v <- mean(PsyEmp_Selbstbestimmung_values, na.rm = TRUE)
 
 DigKomp_Verarbeitung_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
-DigKomp_Verarbeitung_v <- mean(asdf, na.rm = TRUE)
+DigKomp_Verarbeitung_v <- mean(DigKomp_Verarbeitung_values, na.rm = TRUE)
 
 DigKomp_Kommunikation_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
-DigKomp_Kommunikation_v <- mean(asdf, na.rm = TRUE)
+DigKomp_Kommunikation_v <- mean(DigKomp_Kommunikation_values, na.rm = TRUE)
 
 DigKomp_Erstellung_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
-DigKomp_Erstellung_v <- mean(asdf, na.rm = TRUE)
+DigKomp_Erstellung_v <- mean(DigKomp_Erstellung_values, na.rm = TRUE)
 
 DigKomp_Sicherheit_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
 DigKomp_Sicherheit_v <- mean(asdf, na.rm = TRUE)
