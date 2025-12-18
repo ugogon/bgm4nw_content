@@ -73,9 +73,9 @@ Partizipation <- mean()
 #Cluster 09 VirtuelleZusammenarbeit
 VirtuelleZusammenarbeit <- mean(Digi1IKTHaeuf3, Digi1IKTHaeuf4, Digi1IKTHaeuf5, Digi1IKTHaeuf6, Digi1IKTHaeuf7)
 #Cluster 10 IktNutzungVernetzung
-IktNutzungVernetzung <- mean()
+IktNutzungVernetzung <- mean(Digi3IKTNutzung1, Digi3IKTNutzung2, Digi3IKTVernetzung)
 #Cluster 11 Automation
-Automation <- mean()
+Automation <- mean(Digi3IKTAutomation1, Digi3IKTAutomation2, Digi3IKTAutomation3, Digi3IKTAutomation4)
 
 # Laden des Random-Forest-Modells
 rf_model <- readRDS("../../rf_model_cluster.rds")
