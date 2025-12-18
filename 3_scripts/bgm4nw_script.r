@@ -140,7 +140,7 @@ DigKomp_Verarbeitung_v <- mean(DigKomp_Verarbeitung_values, na.rm = TRUE)
 DigKomp_Kommunikation_values <- ifelse(df$virtual_mean <= VirtuelleZusammenarbeit + 1 & df$virtual_mean >= VirtuelleZusammenarbeit - 1, df$virtual_mean, NA)
 DigKomp_Kommunikation_v <- mean(DigKomp_Kommunikation_values, na.rm = TRUE)
 
-DigKomp_Erstellung_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
+DigKomp_Erstellung_values <- ifelse(df$Digi3IKT_Nutzung_Vernetzung_mean <= IktNutzungVernetzung + 1 & df$Digi3IKT_Nutzung_Vernetzung_mean >= IktNutzungVernetzung - 1, df$Digi3IKT_Nutzung_Vernetzung_mean, NA)
 DigKomp_Erstellung_v <- mean(DigKomp_Erstellung_values, na.rm = TRUE)
 
 DigKomp_Sicherheit_values <- ifelse(df$asdf <= asdf + 1 & df$asdf >= asdf - 1, df$asdf, NA)
