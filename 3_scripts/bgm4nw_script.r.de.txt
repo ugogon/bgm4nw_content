@@ -55,9 +55,9 @@ Clusterframe_6 <- subset(Clusterframe_6, select = -c(X))
 #### Erstellen des NW-Profiles für eine Person #### --------------------------------
 #Output.Variable  Name
 #Cluster 01 ZeitlFlexibilitaet
-ZeitlFlexibilitaet <- mean()
+ZeitlFlexibilitaet <- mean(Flex1ze1, Flex1ze2)
 #Cluster 02 OertlicheFlexibiltaet
-OertlicheFlexibiltaet <- mean()
+OertlicheFlexibiltaet <- mean(Flex2oe1a, Flex2oe1b, Flex2oe1c)
 #Cluster 03 Erreichbarkeit
 Erreichbarkeit <- mean(Flex4E1, Flex4E2, Flex4E3, Flex4E4, Flex4E5)
 #Cluster 04 ProReaktivitaet
