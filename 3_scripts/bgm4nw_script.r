@@ -351,12 +351,7 @@ BGM2 <- BGM_Texts[which(BGM_Texts$Names == Personframe$Names[2]),]$Texte
 BGM3 <- BGM_Texts[which(BGM_Texts$Names == Personframe$Names[3]),]$Texte
 BGM4 <- BGM_Texts[which(BGM_Texts$Names == Personframe$Names[4]),]$Texte
 BGM5 <- BGM_Texts[which(BGM_Texts$Names == Personframe$Names[5]),]$Texte
-print(BGM1[1])
-BGM1 <- toString(BGM1)
-BGM2 <- toString(BGM2)
-BGM3 <- toString(BGM3)
-BGM4 <- toString(BGM4)
-BGM5 <- toString(BGM5)
+
 
 #BGM_Texts[which(BGM_Texts$Names == Person$Names[2]),]
 #print(BGM_Texts$Names)
@@ -426,11 +421,11 @@ Comp_16 <- getComp(Low_High[16])
 
 
 # Output weitergeben
-result <- data.frame(Bgm1 = BGM1,
-                     Bgm2 = BGM2,
-                     Bgm3 = BGM3,
-                     Bgm4 = BGM4,
-                     Bgm5 = BGM5,                    
+result <- data.frame(Bgm1 = BGM1[1],
+                     Bgm2 = BGM2[1],
+                     Bgm3 = BGM3[1],
+                     Bgm4 = BGM4[1],
+                     Bgm5 = BGM5[1],                    
                      Name1 = Personframe$Names[1],
                      Name2 = Personframe$Names[2],
                      Name3 = Personframe$Names[3],
