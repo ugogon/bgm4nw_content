@@ -323,11 +323,11 @@ Names <-  c("Sport", "Stress", "Ernährung", "Sucht", "Arbeitsunfälle", "Atmosp
 BGM_Texts <- data.frame(Names, Texte)
 
 # Fuer den Output, nach den fuenf hoechstgerankten Maßnahmen die Texte auswaehlen
-BGM1 <- BGM_Texts[which(BGM_Texts$Names == Person$Names[1]),]$Texte
-BGM2 <- BGM_Texts[which(BGM_Texts$Names == Person$Names[2]),]$Texte
-BGM3 <- BGM_Texts[which(BGM_Texts$Names == Person$Names[3]),]$Texte
-BGM4 <- BGM_Texts[which(BGM_Texts$Names == Person$Names[4]),]$Texte
-BGM5 <- BGM_Texts[which(BGM_Texts$Names == Person$Names[5]),]$Texte
+BGM1 <- BGM_Texts[which(BGM_Texts$Names == PersonRanking[1]),]$Texte
+BGM2 <- BGM_Texts[which(BGM_Texts$Names == PersonRanking[2]),]$Texte
+BGM3 <- BGM_Texts[which(BGM_Texts$Names == PersonRanking[3]),]$Texte
+BGM4 <- BGM_Texts[which(BGM_Texts$Names == PersonRanking[4]),]$Texte
+BGM5 <- BGM_Texts[which(BGM_Texts$Names == PersonRanking[5]),]$Texte
 #BGM_Texts[which(BGM_Texts$Names == Person$Names[2]),]
 #print(BGM_Texts$Names)
 #print(Person$Names[1])
