@@ -115,8 +115,8 @@ dat <- dat %>%
 
 #Kompetenzen Vergleichswerte
 #AGK_Planung ZeitlFlex
-#AGK_Planung_v <- ifelse(df$Flex1_mean_z <= ZeitlFlexibilitaet + 1, 0, 1)
-print(df$Flex1_mean_z)
+AGK_Planung_v <- ifelse(df$Flex1_mean_z <= ZeitlFlexibilitaet + 1, 0, 1)
+#print(df$Flex1_mean_z)
 
 # Nötige Variablen auswählen
 #items_clust <- dat[, short_form_items$items]
