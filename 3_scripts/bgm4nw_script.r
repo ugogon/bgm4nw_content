@@ -61,6 +61,7 @@ Clusterframe_6 <- subset(Clusterframe_6, select = -c(X))
 #Cluster 07 Autonomie
 #Cluster 08 Partizipation
 #Cluster 09 VirtuelleZusammenarbeit
+VirtuelleZusammenarbeit <- mean(Digi1IKTHaeuf3, Digi1IKTHaeuf4, Digi1IKTHaeuf5, Digi1IKTHaeuf6, Digi1IKTHaeuf7)
 #Cluster 10 IktNutzungVernetzung
 #Cluster 11 Automation
 
