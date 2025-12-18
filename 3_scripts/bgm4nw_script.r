@@ -57,7 +57,7 @@ ZeitlFlexibilitaet <- mean()
 #Cluster 02 OertlicheFlexibiltaet
 OertlicheFlexibiltaet <- mean()
 #Cluster 03 Erreichbarkeit
-Erreichbarkeit <- mean()
+Erreichbarkeit <- mean(Flex4E1, Flex4E2, Flex4E3, Flex4E4, Flex4E5)
 #Cluster 04 ProReaktivitaet
 ProReaktivitaet <- mean(AGIL1Pro1, AGIL1Pro2, AGIL1Re)
 #Cluster 05 AgileMethoden
