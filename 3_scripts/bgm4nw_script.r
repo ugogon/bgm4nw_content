@@ -514,8 +514,8 @@ result <- data.frame(Bgm1 = BGM1,
                      Cluster5 = AgileMethoden,
                      Cluster6 = Organisationsstruktur,
                      Cluster7 = Autonomie,
-                     Cluster8 = Clusterframe_[3,8],
-                     Cluster9 = Clusterframe_[3,9],
+                     Cluster8 = Partizipation,
+                     Cluster9 = VirtuelleZusammenarbeit,
                      Cluster10 = Clusterframe_[[10]][3],
                      Cluster11 = Clusterframe_[[11]][3])
 exportJSON <- toJSON(result)
