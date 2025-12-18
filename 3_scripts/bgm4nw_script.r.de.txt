@@ -518,8 +518,8 @@ result <- data.frame(Bgm1 = BGM1,
                      Cluster7 = Autonomie,
                      Cluster8 = Partizipation,
                      Cluster9 = VirtuelleZusammenarbeit,
-                     Cluster10 = Clusterframe_[[10]][3],
-                     Cluster11 = Clusterframe_[[11]][3])
+                     Cluster10 = IktNutzungVernetzung,
+                     Cluster11 = Automation)
 exportJSON <- toJSON(result)
 write(exportJSON, "output.json")
 
