@@ -316,29 +316,7 @@ for(x in 1:16)
   }
 }
 
-plot <- ggplot(data=VisualisationFrame, aes(x=Number, y=IndividualCompetencies)) +
-  geom_bar(stat="identity", color = "black", fill=Colorfill) +
-  geom_segment(aes(x=0.5,y=CompetenceMeans[dat$cluster,16],xend=1.5,yend=CompetenceMeans[dat$cluster,16]), linewidth = 0.8) +
-  geom_segment(aes(x=1.5,y=CompetenceMeans[dat$cluster,15],xend=2.5,yend=CompetenceMeans[dat$cluster,15]), linewidth = 0.8) +
-  geom_segment(aes(x=2.5,y=CompetenceMeans[dat$cluster,14],xend=3.5,yend=CompetenceMeans[dat$cluster,14]), linewidth = 0.8) +
-  geom_segment(aes(x=3.5,y=CompetenceMeans[dat$cluster,13],xend=4.5,yend=CompetenceMeans[dat$cluster,13]), linewidth = 0.8) +
-  geom_segment(aes(x=4.5,y=CompetenceMeans[dat$cluster,12],xend=5.5,yend=CompetenceMeans[dat$cluster,12]), linewidth = 0.8) +
-  geom_segment(aes(x=5.5,y=CompetenceMeans[dat$cluster,11],xend=6.5,yend=CompetenceMeans[dat$cluster,11]), linewidth = 0.8) +
-  geom_segment(aes(x=6.5,y=CompetenceMeans[dat$cluster,10],xend=7.5,yend=CompetenceMeans[dat$cluster,10]), linewidth = 0.8) +
-  geom_segment(aes(x=7.5,y=CompetenceMeans[dat$cluster,9],xend=8.5,yend=CompetenceMeans[dat$cluster,9]), linewidth = 0.8) +
-  geom_segment(aes(x=8.5,y=CompetenceMeans[dat$cluster,8],xend=9.5,yend=CompetenceMeans[dat$cluster,8]), linewidth = 0.8) +
-  geom_segment(aes(x=9.5,y=CompetenceMeans[dat$cluster,7],xend=10.5,yend=CompetenceMeans[dat$cluster,7]), linewidth = 0.8) +
-  geom_segment(aes(x=10.5,y=CompetenceMeans[dat$cluster,6],xend=11.5,yend=CompetenceMeans[dat$cluster,6]), linewidth = 0.8) +
-  geom_segment(aes(x=11.5,y=CompetenceMeans[dat$cluster,5],xend=12.5,yend=CompetenceMeans[dat$cluster,5]), linewidth = 0.8) +
-  geom_segment(aes(x=12.5,y=CompetenceMeans[dat$cluster,4],xend=13.5,yend=CompetenceMeans[dat$cluster,4]), linewidth = 0.8) +
-  geom_segment(aes(x=13.5,y=CompetenceMeans[dat$cluster,3],xend=14.5,yend=CompetenceMeans[dat$cluster,3]), linewidth = 0.8) +
-  geom_segment(aes(x=14.5,y=CompetenceMeans[dat$cluster,2],xend=15.5,yend=CompetenceMeans[dat$cluster,2]), linewidth = 0.8) +
-  geom_segment(aes(x=15.5,y=CompetenceMeans[dat$cluster,1],xend=16.5,yend=CompetenceMeans[dat$cluster,1]), linewidth = 0.8) +
-  geom_text(aes(x = Number, 0.1, label = Competencies, hjust = "left")) +
-  labs(x = "Kompetenzen", y = "Mittelwerte d. Kompetenzen") + 
-  geom_text(aes(label = round(IndividualCompetencies, digits = 2)), hjust=-0.25) + theme_minimal()
-plot + coord_flip()
-ggsave('plot.png') # , width = 1000, height = 800, units = "px" 
+
 
 # Erklaehrungen fuer die BGM-Maßnahmen
 Texte <- c("Verhaltensprävention: Es gibt eine Vielzahl an Möglichkeiten für die Gestaltung eines aktiven Lebensstils. Sollten Sie in Ihrer Arbeit viel sitzen, so können Sie Ihr Muskel-Skelett-System entlasten, indem Sie regelmäßige Pausen machen, um kurz aufzustehen, oder sich zu strecken. Für die Steigerung der körperlichen Fitness empfiehlt die Deutsche Gesellschaft für Sportmedizin und Prävention, etwa 10.000 Schritte am Tag hinzulegen und 150 Minuten körperliche Aktivität pro Woche. Verhältnisprävention: Viele Arbeitgeber bieten Maßnahmen an, um Sie in der aktiven Lebensgestaltung zu unterstützen. Dazu gehören: Firmenläufe, Sportkurse nach der Arbeit oder auch die Förderung privater Sportangebote durch verbilligte Mitgliedschaften bei diversen Fitnessstudios oder anderen Dienstleistern wie dem Urban Sports Club.",
