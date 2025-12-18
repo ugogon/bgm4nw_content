@@ -175,7 +175,7 @@ GesKomp_v <- mean(GesKomp_values, na.rm = TRUE)
 #dat$cluster <- predict(rf_model, newdata = new_data_z)
 
 # updateRanking - Funktion für die individuelle Reihung der Maßnahmen für eine Person
-updateRanking <- function(number, cl)
+updateRanking <- function(number)
 {
   # Input, number - sind die Maßnahmen für die eine Person; cl - Cluster, in dem die Person ist
   # "Bonuspunkte" für Maßnahmen, welche bei besonders hohen/niedrigen Kompetenzen vergeben werden
@@ -189,7 +189,6 @@ updateRanking <- function(number, cl)
   Testperson <- number
   rank <- c(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
   Multiplicator <- c(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-  c <- cl
 
   # Durchgehen aller Maßnahmen und vergeben der Punkte
   ifelse(dat$AGK_Planung <= AGK_Planung_v, Multiplicator[1] <- Multiplicator[1] - 1, Multiplicator[1] <- Multiplicator[1] + 1)
@@ -279,8 +278,8 @@ updateRanking <- function(number, cl)
 
 # Ranking für die Person im passenden Cluster
 Testperson <- dat %>% dplyr::select(AGK_Planung:GesKomp) # Auswahl der Variablen für das Ranking
-RankingUpdates <- updateRanking(Testperson, c(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)) # Individualisierung des Rankings
-Person$Ranking <- Person$Ranking + RankingUpdates
+RankingUpdates <- updateRanking(Testperson) # Individualisierung des Rankings
+PersonRanking <- c(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) + RankingUpdates
 Person <- Person[order(Person$Ranking, decreasing=TRUE),] # Ordnung des Rankings
 
 # Informationen zu den Kompetenzen einfügen
