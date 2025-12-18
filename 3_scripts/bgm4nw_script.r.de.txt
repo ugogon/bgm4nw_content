@@ -385,7 +385,7 @@ if(dat$cluster == 3) { Clusterframe_ <- Clusterframe_3 }
 if(dat$cluster == 4) { Clusterframe_ <- Clusterframe_4 }
 if(dat$cluster == 5) { Clusterframe_ <- Clusterframe_5 }
 if(dat$cluster == 6) { Clusterframe_ <- Clusterframe_6 }
-
+#test
 #String <- "Führung"
 #Encoding(String)
 #install.packages("stringi")
