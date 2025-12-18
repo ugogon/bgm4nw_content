@@ -479,16 +479,6 @@ result <- data.frame(Bgm1 = BGM1,
                      RefVal14 = HoL_Verhalten_v,
                      RefVal15 = Resilienz_v,
                      RefVal16 = GesKomp_v,
-                     Cluster1 = ZeitlFlexibilitaet,
-                     Cluster2 = OertlicheFlexibiltaet,
-                     Cluster3 = Erreichbarkeit,
-                     Cluster4 = ProReaktivitaet,
-                     Cluster5 = AgileMethoden,
-                     Cluster6 = Organisationsstruktur,
-                     Cluster7 = Autonomie,
-                     Cluster8 = Partizipation,
-                     Cluster9 = VirtuelleZusammenarbeit,
-                     Cluster10 = IktNutzungVernetzung,
-                     Cluster11 = Automation)
+                     )
 exportJSON <- toJSON(result)
 write(exportJSON, "output.json")
