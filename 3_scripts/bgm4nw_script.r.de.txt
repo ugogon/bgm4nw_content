@@ -21,23 +21,23 @@ dat <- read.csv("input.csv") # Der allgemeine Dataframe mit allen Variablen
 dat["lang"] <- NULL
 CompetenciesFrame <- data.frame(read.csv("../../competenciesframe.csv")) # Kompetenzwerte für jede Person
 CompetenciesFrame <- subset(CompetenciesFrame, select = -c(X))
-CompetenceMeans <- data.frame(read.csv("../../CompetenceMeans.csv")) # Mittelwerte der Kompetenzen nach Cluster
+CompetenceMeans <- data.frame(read.csv("../../competencemeans.csv")) # Mittelwerte der Kompetenzen nach Cluster
 CompetenceMeans <- subset(CompetenceMeans, select = -c(X))
-DeviationMeans  <- data.frame(read.csv("../../DeviationMeans.csv")) # Standardabweichungen der Kompetenzen nach Cluster
+DeviationMeans  <- data.frame(read.csv("../../deviationmeans.csv")) # Standardabweichungen der Kompetenzen nach Cluster
 DeviationMeans <- subset(DeviationMeans, select = -c(X))
 short_form_items  <- data.frame(read.csv("../../short_form_items.csv")) # Werte der gekürzten Skala 
 short_form_items <- subset(short_form_items, select = -c(X))
-Cluster1  <- data.frame(read.csv("../../Cluster1.csv"))
+Cluster1  <- data.frame(read.csv("../../cluster1.csv"))
 Cluster1 <- subset(Cluster1, select = -c(X))
-Cluster2 <- data.frame(read.csv("../../Cluster2.csv"))
+Cluster2 <- data.frame(read.csv("../../cluster2.csv"))
 Cluster2 <- subset(Cluster2, select = -c(X))
-Cluster3 <- data.frame(read.csv("../../Cluster3.csv"))
+Cluster3 <- data.frame(read.csv("../../cluster3.csv"))
 Cluster3 <- subset(Cluster3, select = -c(X))
-Cluster4 <- data.frame(read.csv("../../Cluster4.csv"))
+Cluster4 <- data.frame(read.csv("../../cluster4.csv"))
 Cluster4 <- subset(Cluster4, select = -c(X))
-Cluster5 <- data.frame(read.csv("../../Cluster5.csv"))
+Cluster5 <- data.frame(read.csv("../../cluster5.csv"))
 Cluster5 <- subset(Cluster5, select = -c(X))
-Cluster6 <- data.frame(read.csv("../../Cluster6.csv"))
+Cluster6 <- data.frame(read.csv("../../cluster6.csv"))
 Cluster6 <- subset(Cluster6, select = -c(X))
 Clusterframe_1 <- data.frame(read.csv("../../clusterframe_1.csv"))
 Clusterframe_1 <- subset(Clusterframe_1, select = -c(X))
