@@ -421,11 +421,12 @@ Comp_16 <- getComp(Low_High[16])
 #           axistype = 1, caxislabels=seq(0,10,2), axislabcol = "black", calcex = 2)
 # This function is required to save the files correctly
 
-print(Personframe$Names[1])
-print(Personframe$Names[2])
-print(Personframe$Names[3])
-print(Personframe$Names[4])
-print(Personframe$Names[5])
+print(BGM1)
+print(BGM2)
+print(BGM3)
+print(BGM4)
+print(BGM5)
+
 # Output weitergeben
 result <- data.frame(Bgm1 = BGM1,
                      Bgm2 = BGM2,
