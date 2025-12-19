@@ -420,6 +420,10 @@ Comp_16 <- getComp(Low_High[16])
 # This function is required to save the files correctly
 
 print(Personframe$Names[1])
+print(Personframe$Names[2])
+print(Personframe$Names[3])
+print(Personframe$Names[4])
+print(Personframe$Names[5])
 # Output weitergeben
 result <- data.frame(Bgm1 = BGM1,
                      Bgm2 = BGM2,
