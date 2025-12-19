@@ -420,7 +420,6 @@ Comp_16 <- getComp(Low_High[16])
 # This function is required to save the files correctly
 
 
-print(dat$DigKomp_Verarbeitung)
 
 # Output weitergeben
 result <- data.frame(Bgm1 = BGM1,
