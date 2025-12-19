@@ -420,17 +420,7 @@ Comp_16 <- getComp(Low_High[16])
 #           # Text Labels
 #           axistype = 1, caxislabels=seq(0,10,2), axislabcol = "black", calcex = 2)
 # This function is required to save the files correctly
-print(ZeitlFlexibilitaet)
-print(OertlicheFlexibiltaet)
-print(Erreichbarkeit)
-print(ProReaktivitaet)
-print(AgileMethoden)
-print(Organisationsstruktur)
-print(Autonomie)
-print(Partizipation)
-print(VirtuelleZusammenarbeit)
-print(IktNutzungVernetzung)
-print(Automation)
+
 
 
 
