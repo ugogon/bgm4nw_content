@@ -421,7 +421,7 @@ Comp_16 <- getComp(Low_High[16])
 #           axistype = 1, caxislabels=seq(0,10,2), axislabcol = "black", calcex = 2)
 # This function is required to save the files correctly
 
-print(BGM1)
+print(Comp_1)
 print(BGM2)
 print(BGM3)
 print(BGM4)
@@ -438,22 +438,6 @@ result <- data.frame(Bgm1 = BGM1,
                      Name3 = Personframe$Names[3],
                      Name4 = Personframe$Names[4],
                      Name5 = Personframe$Names[5],
-                     Comp1 = Comp_1,
-                     Comp2 = Comp_2,
-                     Comp3 = Comp_3,
-                     Comp4 = Comp_4,
-                     Comp5 = Comp_5,
-                     Comp6 = Comp_6,
-                     Comp7 = Comp_7,
-                     Comp8 = Comp_8,
-                     Comp9 = Comp_9,
-                     Comp10 = Comp_10,
-                     Comp11 = Comp_11,
-                     Comp12 = Comp_12,
-                     Comp13 = Comp_13,
-                     Comp14 = Comp_14,
-                     Comp15 = Comp_15,
-                     Comp16 = Comp_16,
                      CompVal1 = dat$AGK_Planung,
                      CompVal2 = dat$AGK_Selbstmotivierung,
                      CompVal3 = dat$AGK_Stressvermeidung,
