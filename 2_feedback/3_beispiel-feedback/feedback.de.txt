@@ -2,7 +2,7 @@ Title: Beispiel_Feedback
 
 ----
 
-Text: [{"content":{"level":"h2","text":"Willkommen zu ihrem individuellen Feedback!"},"id":"9fcd5542-9a1b-4756-927d-7400a6ddc4ca","isHidden":false,"type":"heading"}]
+Text: [{"content":{"level":"h2","text":"Willkommen zu ihrem individuellen Feedback!"},"id":"9fcd5542-9a1b-4756-927d-7400a6ddc4ca","isHidden":false,"type":"heading"},{"content":{"text":"<p>Ihre Arbeitsumgebung ist {{Umgebung}}</p>"},"id":"0a6e69b2-afa8-4e28-9140-18378fbff3e6","isHidden":false,"type":"text"}]
 
 ----
 
