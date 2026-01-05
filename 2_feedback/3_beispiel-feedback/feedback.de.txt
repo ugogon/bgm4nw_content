@@ -2,7 +2,7 @@ Title: Beispiel_Feedback
 
 ----
 
-Text: 
+Text: [{"content":{"level":"h2","text":"Willkommen zu ihrem individuellen Feedback!"},"id":"9fcd5542-9a1b-4756-927d-7400a6ddc4ca","isHidden":false,"type":"heading"}]
 
 ----
 
