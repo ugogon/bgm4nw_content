@@ -19,7 +19,7 @@ Text <- ifelse(Umgebung > 3, Text3, Text)
 CompVal1 <- dat$Kompetenz1
 CompVal2 <- dat$Kompetenz2
 
-RefValue <-
+RefValue <- 1.5
 
 
 # Ergebnisse
