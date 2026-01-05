@@ -2,7 +2,7 @@ Title: Beispiel_Feedback
 
 ----
 
-Text: [{"content":{"level":"h2","text":"Willkommen zu ihrem individuellen Feedback!"},"id":"9fcd5542-9a1b-4756-927d-7400a6ddc4ca","isHidden":false,"type":"heading"},{"content":{"text":"<p>Der Digitalisierungsgrad Ihrer Arbeitsumgebung wurde mit {{Umgebung}} / 5 beschrieben.</p>"},"id":"0a6e69b2-afa8-4e28-9140-18378fbff3e6","isHidden":false,"type":"text"},{"content":{"text":"<p>Ihre Arbeitsumgebung kann wie folgt beschrieben werden: {{Text}}</p>"},"id":"59b89491-26cd-479a-80c5-c93d4a05f304","isHidden":false,"type":"text"},{"content":{"headline":"Ihre Kompetenzne","text":"test","competencieschart":[{"competence":"Digitale Kompetenz","value":"5","reference":"10"}],"competencies":[]},"id":"eb489147-5dbd-4b56-9aed-ee25b476002c","isHidden":false,"type":"competence-section"}]
+Text: [{"content":{"level":"h2","text":"Willkommen zu ihrem individuellen Feedback!"},"id":"9fcd5542-9a1b-4756-927d-7400a6ddc4ca","isHidden":false,"type":"heading"},{"content":{"text":"<p>Der Digitalisierungsgrad Ihrer Arbeitsumgebung wurde mit {{Umgebung}} / 5 beschrieben.</p>"},"id":"0a6e69b2-afa8-4e28-9140-18378fbff3e6","isHidden":false,"type":"text"},{"content":{"text":"<p>Ihre Arbeitsumgebung kann wie folgt beschrieben werden: {{Text}}</p>"},"id":"59b89491-26cd-479a-80c5-c93d4a05f304","isHidden":false,"type":"text"},{"content":{"headline":"Ihre Kompetenzne","text":"test","competencieschart":[{"competence":"Digitale Kompetenz","value":"2","reference":"4"}],"competencies":[]},"id":"eb489147-5dbd-4b56-9aed-ee25b476002c","isHidden":false,"type":"competence-section"}]
 
 ----
 
