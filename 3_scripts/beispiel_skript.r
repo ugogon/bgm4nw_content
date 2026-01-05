@@ -18,6 +18,7 @@ Text <- ifelse(Umgebung > 3, Text3, Text)
 
 
 # Ergebnisse
-result <- data.frame(Umgebung = Umgebung)
+result <- data.frame(Umgebung = Umgebung,
+                     Text = Text)
 exportJSON <- toJSON(result)
 write(exportJSON, "output.json")
