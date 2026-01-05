@@ -19,9 +19,13 @@ Text <- ifelse(Umgebung > 3, Text3, Text)
 CompVal1 <- dat$Kompetenz1
 CompVal2 <- dat$Kompetenz2
 
-RefValue <- 1.5
-RefValue <- ifelse(Umgebung == 3, 3.5, RefValue)
-RefValue <- ifelse(Umgebung > 3, 4, RefValue)
+RefValue1 <- 1.5
+RefValue1 <- ifelse(Umgebung == 3, 3.5, RefValue1)
+RefValue1 <- ifelse(Umgebung > 3, 4, RefValue1)
+
+RefValue2 <- 1
+RefValue2 <- ifelse(Umgebung == 3, 2, RefValue1)
+RefValue2 <- ifelse(Umgebung > 3, 4, RefValue1)
 
 # Ergebnisse
 result <- data.frame(Umgebung = Umgebung,
