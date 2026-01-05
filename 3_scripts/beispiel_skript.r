@@ -7,6 +7,9 @@ dat <- read.csv("input.csv")
 # Berechnungen
 Umgebung <- mean(dat$Umgebung1, dat$Umgebung2)
 
+Text1 <- "Ihre Arbeitsumgebung ist wenig digitalisiert."
+Text2 <- "Ihre Arbeitsumgebung ist mittelmäßig digitalisiert."
+Text3 <- "Ihre Arbeitsumgebung ist stark digitalisiert."
 
 # Ergebnisse
 result <- data.frame(Umgebung = Umgebung)
