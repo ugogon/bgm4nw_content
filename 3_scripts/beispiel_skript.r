@@ -24,8 +24,8 @@ RefValue1 <- ifelse(Umgebung == 3, 3.5, RefValue1)
 RefValue1 <- ifelse(Umgebung > 3, 4, RefValue1)
 
 RefValue2 <- 1
-RefValue2 <- ifelse(Umgebung == 3, 2, RefValue1)
-RefValue2 <- ifelse(Umgebung > 3, 4, RefValue1)
+RefValue2 <- ifelse(Umgebung == 3, 2, RefValue2)
+RefValue2 <- ifelse(Umgebung > 3, 4, RefValue2)
 
 # Ergebnisse
 result <- data.frame(Umgebung = Umgebung,
