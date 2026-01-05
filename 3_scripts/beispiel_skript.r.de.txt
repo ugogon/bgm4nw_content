@@ -18,6 +18,11 @@ Text <- Text1
 Text <- ifelse(Umgebung == 3, Text2, Text)
 Text <- ifelse(Umgebung > 3, Text3, Text)
 
+CompVal1 <- dat$Kompetenz1
+CompVal2 <- dat$Kompetenz2
+
+RefValue <-
+
 
 # Ergebnisse
 result <- data.frame(Umgebung = Umgebung,
