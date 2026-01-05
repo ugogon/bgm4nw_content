@@ -2,7 +2,7 @@
 dat <- read.csv("input.csv")
 
 # Berechnungen
-Umgebung <- mean(Umgebung1, Umgebung2)
+Umgebung <- mean(dat$Umgebung1, dat$Umgebung2)
 
 
 # Ergebnisse
