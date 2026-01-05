@@ -29,7 +29,7 @@ RefVal2 <- ifelse(Umgebung > 3, 4, RefVal2)
 
 # Ergebnisse
 result <- data.frame(Umgebung = Umgebung,
-                     Text = Text.
+                     Text = Text,
                      CompVal1,
                      CompVal2,
                      RefVal1,
