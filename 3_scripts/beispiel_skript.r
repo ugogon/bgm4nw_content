@@ -7,5 +7,3 @@ Umgebung <- mean(dat$Umgebung1, dat$Umgebung2)
 
 # Ergebnisse
 result <- data.frame(Umgebung = Umgebung)
-exportJSON <- toJSON(result)
-write(exportJSON, "output.json")
