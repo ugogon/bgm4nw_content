@@ -1,6 +1,11 @@
 # Der allgemeine Dataframe mit allen Variablen
 dat <- read.csv("input.csv")
+
+# Berechnungen
 Umgebung <- mean(Umgebung1, Umgebung2)
+
+
+# Ergebnisse
 result <- data.frame(Umgebung = Umgebung)
 exportJSON <- toJSON(result)
 write(exportJSON, "output.json")
