@@ -22,7 +22,8 @@ CompVal1 <- dat$Kompetenz1
 CompVal2 <- dat$Kompetenz2
 
 RefValue <- 1.5
-
+RefValue <- ifelse(Umgebung == 3, 3.5, RefValue)
+RefValue <- ifelse(Umgebung > 3, 4, RefValue)
 
 # Ergebnisse
 result <- data.frame(Umgebung = Umgebung,
