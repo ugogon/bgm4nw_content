@@ -2,7 +2,7 @@ Title: Beispiel
 
 ----
 
-Fixed: [{"content":{"level":"h2","text":"So könnte ihr lernendes System aussehen!"},"id":"88d091a1-0d25-4c45-86dc-2e2fff576335","isHidden":false,"type":"heading"},{"content":{"text":"<p>In unserem innovativen, modularen System können Inhalte einfach und schnell ergänzt werden. Auf der Startseite folgenden meist allgemeine Informationen für die Benutzer*innen, gefolgt von Kontaktdaten.</p>"},"id":"9fb9dbb9-031a-4eee-9c7c-5af658222266","isHidden":false,"type":"text"},{"content":{"text":"<p>Im Anschluss wird die entsprechende Umfrage ausgefüllt. Dies kann einfach erstellt werden und bietet eine Oberfläche welche ähnliche wie Lime- oder SoSciSurvey aufgebaut ist. Dort können alle gänglichen Frageformate genutzt werden, um Informationen von den Bentzer*innen zu bekommen.</p>"},"id":"48f4c369-610c-4494-a346-abc3c9cef373","isHidden":false,"type":"text"},{"content":{"text":"<p>Im Anschluss werden die Eingaben direkt ausgewertet und die Benutzer*innen erhalten ohne Verzögerung ein Individualisiertes Feedback. Dabei können sowohl individuelle Eingaben als auch bestehende Datenquellen in die Auswertung einbezogen werden. Graphisch bietet das Systeme diverse mögliche Diagramme und Anzeigemöglichkeiten.</p>"},"id":"d28a9567-c415-4e09-850f-bf2b944588d9","isHidden":false,"type":"text"},{"content":{"text":"<p>test</p>"},"id":"2b27848d-3c89-4e55-8f06-6bcb7fd4795a","isHidden":false,"type":"text"}]
+Fixed: [{"content":{"level":"h2","text":"So könnte ihr lernendes System aussehen!"},"id":"88d091a1-0d25-4c45-86dc-2e2fff576335","isHidden":false,"type":"heading"}]
 
 ----
 
