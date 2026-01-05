@@ -1,3 +1,6 @@
+# Libraries
+library(jsonlite)
+
 # Der allgemeine Dataframe mit allen Variablen
 dat <- read.csv("input.csv")
 
@@ -7,3 +10,5 @@ Umgebung <- mean(dat$Umgebung1, dat$Umgebung2)
 
 # Ergebnisse
 result <- data.frame(Umgebung = Umgebung)
+exportJSON <- toJSON(result)
+write(exportJSON, "output.json")
