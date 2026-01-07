@@ -46,6 +46,7 @@ result <- data.frame(Umgebung = Umgebung,
                      CompVal2 = CompVal2,
                      RefVal1 = RefVal1,
                      RefVal2 = RefVal2,
-                     CompText = CompText)
+                     CompText = CompText,
+                     StressText = StressText)
 exportJSON <- toJSON(result)
 write(exportJSON, "output.json")
