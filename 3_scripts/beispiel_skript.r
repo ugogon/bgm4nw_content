@@ -35,8 +35,8 @@ CompText <- ifelse(Problem == 1, CompText1, CompText2)
 
 Stress <- ifelse(CompVal2 > RefVal2, 1, 0)
 
-StressText1 <- ""
-StressText2 <- ""
+StressText1 <- "Ihr Technostress ist für Ihre Arbeitsumgebung eher hoch ausgeprägt. Behalten Sie dies im Auge und informieren Sie sich über mögliche Unterstützung, welche Ihnen bereitstehen."
+StressText2 <- "Ihr Technostress ist für Ihre Arbeitsumgebung gering ausgeprägt. Hier besteht kein Handlungsbedarf."
 StressText <- ifelse(Stress == 1, StressText1, StressText2)
 
 # Ergebnisse
