@@ -35,6 +35,12 @@ CompText1 <- "Ihre digitale Kompetenz ist im Vergleich zu anderen Personen, welc
 CompText2 <- "Ihre digitale Kompetenz ist im Vergleich zu anderen Personen, welche in ähnlich digitalen Arbeitssettings angestellt sind, gut ausgeprägt. Hier besteht aktuell kein Handlungsbedarf."
 CompText <- ifelse(Problem == 1, CompText1, CompText2)
 
+Stress <- ifelse(CompVal2 > RefVal2, 1, 0)
+
+StressText1 <- ""
+StressText2 <- ""
+StressText <- ifelse(Stress == 1, StressText1, StressText2)
+
 # Ergebnisse
 result <- data.frame(Umgebung = Umgebung,
                      Text = Text,
