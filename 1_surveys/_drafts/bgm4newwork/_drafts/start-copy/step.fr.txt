@@ -1,9 +1,0 @@
-Title: Start
-
-----
-
-Blocks: [{"content":{"level":"h2","text":"Enquête pour votre New Work Assessment personnel"},"id":"832189b7-1004-401f-9c7c-fde6ca8f5dbb","isHidden":false,"type":"heading"},{"content":{"text":"<p>Bienvenue dans l'outil de sondage BGM4NW. Le projet de recherche BGM4NW s'est penché sur les mesures liées à la santé au travail et les nouveaux environnements de travail (New Work). Le terme «&nbsp;New Work&nbsp;» décrit des environnements de travail qui mettent l'accent sur l'autodétermination et sont souvent organisés de manière flexible. Dans le cadre du projet, cet outil a également été développé pour vous aider à adopter un comportement sain dans les environnements de travail New Work.</p><p>Vous trouverez ci-dessous quelques questions succinctes concernant votre environnement de travail. Après avoir répondu à ces questions (cela vous prendra environ 15 minutes), vous recevrez un profil personnel qui vous fournira des informations sur votre environnement de travail, vos ressources personnelles et vos besoins, et vous proposera des mesures de gestion de la santé au travail qui pourraient vous être utiles. Cet outil a été développé par l'équipe de l'Institut de médecine du travail, sociale et préventive de la faculté de médecine de Göttingen pour le projet BGM4NW. Des questions&nbsp;? N'hésitez pas à nous contacter en utilisant les coordonnées suivantes x.</p>"},"id":"3c71699c-088e-481c-8981-41caec293a20","isHidden":false,"type":"text"}]
-
-----
-
-Fixed: 

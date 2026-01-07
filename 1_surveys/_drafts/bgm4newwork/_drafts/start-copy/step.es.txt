@@ -1,9 +1,0 @@
-Title: Start
-
-----
-
-Blocks: [{"content":{"level":"h2","text":"Encuesta para su evaluación personalizada de New Work"},"id":"832189b7-1004-401f-9c7c-fde6ca8f5dbb","isHidden":false,"type":"heading"},{"content":{"text":"<p>Bienvenido a la herramienta de encuestas BGM4NW. El proyecto de investigación BGM4NW se ha centrado en las medidas de salud en el ámbito laboral y los nuevos entornos de trabajo. Los entornos de trabajo New Work describen entornos laborales que se centran en la autonomía y suelen estar organizados de forma flexible. En el marco del proyecto, también se ha desarrollado esta herramienta, cuyo objetivo es ayudarle a adoptar comportamientos saludables en entornos de trabajo New Work.</p><p>A continuación, le haremos algunas preguntas breves sobre su entorno laboral. Después de responderlas (unos 15 minutos), recibirá un perfil personalizado que le proporcionará información sobre su entorno laboral, sus recursos personales y sus necesidades, y le sugerirá posibles medidas de gestión de la salud en la empresa que podrían resultarle útiles. La herramienta ha sido desarrollada por el equipo del Instituto de Medicina Laboral, Social y Preventiva de la Universidad Médica de Gotinga para el proyecto BGM4NW. Si tiene alguna pregunta, no dude en ponerse en contacto con nosotros en x.</p>"},"id":"3c71699c-088e-481c-8981-41caec293a20","isHidden":false,"type":"text"}]
-
-----
-
-Fixed: 

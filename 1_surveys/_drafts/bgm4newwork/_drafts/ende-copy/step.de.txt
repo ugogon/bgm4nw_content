@@ -1,9 +1,0 @@
-Title: Ende Copy
-
-----
-
-Blocks: [{"content":{"text":"<p><strong>Wir sind am Ende der Umfrage. Vielen Dank, dass Sie sich die Zeit genommen haben, unsere Fragen zu beantworten.</strong></p><p><strong>Als nächstes erhalten Sie Ihr persönliches Feedback mit</strong> <strong>Informationen über Ihre Arbeitsumgebung, ihre persönlichen Ressourcen und Anforderungen und Vorschlägen zu möglichen BGM-Maßnahmen.</strong></p><p><strong>Bleiben Sie gesund!</strong> </p>"},"id":"d2480850-ef76-495b-9f73-3b153e728e73","isHidden":false,"type":"text"}]
-
-----
-
-Uuid: vkibh04x3yfu9yv2

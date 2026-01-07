@@ -1,0 +1,3 @@
+Error in ifelse(Umgebung <= 2) :
+  argument "no" is missing, with no default
+Execution halted

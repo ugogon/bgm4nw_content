@@ -1,9 +1,0 @@
-Title: Start
-
-----
-
-Blocks: [{"content":{"level":"h2","text":"Kişisel Yeni İş Değerlendirmeniz Hakkında Anket"},"id":"832189b7-1004-401f-9c7c-fde6ca8f5dbb","isHidden":false,"type":"heading"},{"content":{"text":"<p>BGM4NW anket aracına hoş geldiniz. BGM4NW araştırma projesi, işyerinde sağlık önlemleriyle ve yeni çalışma ortamlarıyla ilgilenmiştir. Yeni çalışma ortamları, kendini tanımlama odaklı ve genellikle esnek bir şekilde organize edilmiş çalışma ortamlarını tanımlar. Proje kapsamında, yeni çalışma ortamlarında sağlıklı davranışlar sergilemenize yardımcı olacak bu araç da geliştirilmiştir.</p><p>Takip eden kısımda çalışma ortamınızla ilgili size birkaç kısa soru sorulacaktır. Bu soruları cevapladıktan sonra (~ 15 dakika), çalışma ortamınız, kişisel kaynaklarınız ve gereksinimleriniz hakkında bilgi veren ve sizin için yararlı olabilecek muhtemel BGM önlemlerini öneren kişisel bir profil alacaksınız. Bu araç, Göttingen Üniversitesi Tıp Fakültesi Çalışma, Sosyal ve Koruyucu Tıp Enstitüsü ekibi tarafından BGM4NW projesi için geliştirilmiştir. Sorularınız için lütfen bizimle x adresinden iletişime geçin.</p>"},"id":"3c71699c-088e-481c-8981-41caec293a20","isHidden":false,"type":"text"}]
-
-----
-
-Fixed: 
