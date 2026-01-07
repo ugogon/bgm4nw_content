@@ -27,12 +27,14 @@ RefVal2 <- 1
 RefVal2 <- ifelse(Umgebung == 3, 2, RefVal2)
 RefVal2 <- ifelse(Umgebung > 3, 4, RefVal2)
 
+Problem <- ifelse(CompVal1 < RefVal1, 1, 0)
+
 # Ergebnisse
 result <- data.frame(Umgebung = Umgebung,
                      Text = Text,
-                     CompVal1,
-                     CompVal2,
-                     RefVal1,
-                     RefVal2)
+                     CompVal1 = CompVal1,
+                     CompVal2 = CompVal2,
+                     RefVal1 = RefVal1,
+                     RefVal2 = RefVal2)
 exportJSON <- toJSON(result)
 write(exportJSON, "output.json")
