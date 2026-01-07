@@ -2,7 +2,7 @@ Title: Beispiel
 
 ----
 
-Fixed: [{"content":{"level":"h2","text":"So könnte ihr lernendes System aussehen!"},"id":"88d091a1-0d25-4c45-86dc-2e2fff576335","isHidden":false,"type":"heading"}]
+Fixed: [{"content":{"level":"h2","text":"So könnte ihr Lernendes System aussehen!"},"id":"88d091a1-0d25-4c45-86dc-2e2fff576335","isHidden":false,"type":"heading"}]
 
 ----
 
